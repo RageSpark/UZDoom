@@ -72,7 +72,7 @@ CUSTOM_CVAR(Float, m_tooltip_delay, 9.0f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	if (self <= 0.0f)
 		self = 0.1f;
 }
-CUSTOM_CVAR(Float, m_tooltip_speed, 3.0f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CUSTOM_CVAR(Float, m_tooltip_speed, 0.5f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	if (self <= 0.0f)
 		self = 0.1f;

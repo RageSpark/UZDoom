@@ -379,7 +379,7 @@ class Menu : Object native ui version("2.4")
 			maxOffset = bl.Count() - m_tooltip_lines;
 			double delta = GetDeltaTime();
 			if (mTooltipScrollTimer <= 0.0)
-				mTooltipScrollOffset = Clamp(mTooltipScrollOffset + (1.0 / m_tooltip_speed) * delta, 0.0, maxOffset);
+				mTooltipScrollOffset = Clamp(mTooltipScrollOffset + (m_tooltip_speed * delta), 0.0, maxOffset);
 
 			if (mTooltipScrollTimer > 0.0)
 			{

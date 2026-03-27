@@ -266,7 +266,7 @@ class OptionMenu : Menu
 				maxOffset = int(Ceil(double(space) / textHeight));
 				height -= textHeight * maxOffset;
 				if (mOptionValueTooltipScrollTimer <= 0.0)
-					mOptionValueTooltipScrollOffset = Clamp(mOptionValueTooltipScrollOffset + (1.0 / m_tooltip_speed) * delta, 0.0, maxOffset);
+					mOptionValueTooltipScrollOffset = Clamp(mOptionValueTooltipScrollOffset + (m_tooltip_speed * delta), 0.0, maxOffset);
 
 				if (mOptionValueTooltipScrollTimer > 0.0)
 				{
