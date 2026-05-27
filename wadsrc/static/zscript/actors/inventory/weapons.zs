@@ -1025,7 +1025,7 @@ class Weapon : StateProvider
 		{
 			enoughmask = 1 << altFire;
 		}
-		if (altFire && FindState('AltFire') == null)
+		if (altFire && GetAltAtkState(false) == null)
 		{ // If this weapon has no alternate fire, then there is never enough ammo for it
 			enough &= 1;
 		}
