@@ -57,6 +57,7 @@ public:
 	
 	int OpenRenderer() override;
 	std::string GetStats() override;
+	void        SetVoiceControl(uint16_t channel, uint8_t control, uint8_t value) override;
 	void ChangeSettingInt(const char *setting, int value) override;
 	void ChangeSettingNum(const char *setting, double value) override;
 	void ChangeSettingString(const char *setting, const char *value) override;
@@ -407,6 +408,17 @@ std::string FluidSynthMIDIDevice::GetStats()
 	snprintf(out, 100,"Voices: %3d/%3d(%3d) %6.2f%% CPU   Reverb: %3s Chorus: %3s",
 		voices, polyphony, maxpoly, load, reverb ? "yes" : "no", chorus ? "yes" : "no");
 	return out;
+}
+
+//==
+//
+//	FluidSynthMIDIDevice::SetVoiceControl
+//	
+//==
+
+void FluidSynthMIDIDevice::SetVoiceControl(uint16_t channel, uint8_t control, uint8_t value)
+{
+	fluid_synth_cc(FluidSynth, channel, control, value);
 }
 
 //

@@ -53,6 +53,8 @@ public:
 	virtual bool CanHandleSysex() const { return true; }
 	virtual SoundStreamInfoEx GetStreamInfoEx() const;
 
+	virtual void SetVoiceControl(uint16_t channel, uint8_t control, uint8_t value) {};
+
 protected:
 	MidiCallback Callback;
 	void* CallbackData;

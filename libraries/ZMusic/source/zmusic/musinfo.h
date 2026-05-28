@@ -32,7 +32,7 @@ public:
 	virtual void ChangeSettingString(const char* setting, const char* value) {}	// "
 	virtual bool ServiceStream(void *buff, int len) { return false;  }
 	virtual SoundStreamInfoEx GetStreamInfoEx() const = 0;
-
+	virtual void              SetMIDIVoiceValue(uint16_t channel, uint8_t ctrl, uint8_t value){}
 	enum EState
 	{
 		STATE_Stopped,

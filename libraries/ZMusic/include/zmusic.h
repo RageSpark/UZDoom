@@ -350,6 +350,7 @@ extern "C"
 	DLL_IMPORT zmusic_bool ChangeMusicSettingString(EStringConfigKey key, ZMusic_MusicStream song, const char* value);
 	DLL_IMPORT const char *ZMusic_GetStats(ZMusic_MusicStream song);
 
+	DLL_IMPORT void SetMIDIVoiceVal(ZMusic_MusicStream song, uint16_t channel, uint8_t control, uint8_t value);
 
 	DLL_IMPORT struct SoundDecoder* CreateDecoder(const uint8_t* data, size_t size, zmusic_bool isstatic);
 	DLL_IMPORT void SoundDecoder_GetInfo(struct SoundDecoder* decoder, int* samplerate, ChannelConfig* chans, SampleType* type);
@@ -441,7 +442,7 @@ typedef size_t (*pfn_SoundDecoder_Read)(struct SoundDecoder* decoder, void* buff
 typedef void (*pfn_SoundDecoder_Close)(struct SoundDecoder* decoder);
 typedef void (*pfn_FindLoopTags)(const uint8_t* data, size_t size, uint32_t* start, zmusic_bool* startass, uint32_t* end, zmusic_bool* endass);
 typedef const ZMusicMidiOutDevice *(*pfn_ZMusic_GetMidiDevices)(int *pAmount);
-
+typedef void (*pfn_SetMIDIVoiceVal)(ZMusic_MusicStream song, uint16_t channel, uint8_t control, uint8_t value);
 
 
 #endif

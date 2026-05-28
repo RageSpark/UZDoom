@@ -88,6 +88,7 @@ public:
 	int ServiceEvent();
 	void SetMIDISource(MIDISource* _source);
 	bool ServiceStream(void* buff, int len) override;
+	void SetMIDIVoiceValue(uint16_t channel, uint8_t control, uint8_t value) override;
 	SoundStreamInfoEx GetStreamInfoEx() const override;
 
 	int GetDeviceType() const override;
@@ -1046,4 +1047,9 @@ DLL_EXPORT zmusic_bool ZMusic_MIDIDumpWave(ZMusic_MidiSource source, EMidiDevice
 		SetError(ex.what());
 		return false;
 	}
+}
+
+void MIDIStreamer::SetMIDIVoiceValue(uint16_t channel, uint8_t control, uint8_t value)
+{
+	MIDI->SetVoiceControl(channel, control, value);
 }

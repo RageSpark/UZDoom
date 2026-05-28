@@ -572,3 +572,10 @@ DLL_EXPORT zmusic_bool ZMusic_WriteSMF(MIDISource* source, const char *fn, int l
 	fclose(f);
 	return success;
 }
+
+DLL_EXPORT void SetMIDIVoiceVal(ZMusic_MusicStream song, uint16_t channel, uint8_t ctrl, uint8_t value)
+{
+	if (!song)
+		return;
+	song->SetMIDIVoiceValue(channel, ctrl, value);
+}

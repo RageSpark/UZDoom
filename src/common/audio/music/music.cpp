@@ -1084,3 +1084,38 @@ CCMD(currentmusic)
 		Printf("Currently no music playing\n");
 	}
 }
+
+//
+
+void SetMIDIVoiceControl(uint16_t voice_index, uint8_t control, uint8_t value)
+{
+	SetMIDIVoiceVal(mus_playing.handle, voice_index, control, value);
+}
+
+CCMD(SetMIDIVoice)
+{
+	int argc = argv.argc();
+	if (argc <= 3 || argc >= 5)
+	{
+		Printf("SetMIDIVoice [voice index] [control change] [value: 0-127]\n");
+		return;
+	}
+
+	if (!mus_playing.name.IsNotEmpty())
+	{
+		Printf("Currently no music playing\n");
+		return;
+	}
+
+	if (!ZMusic_IsMIDI(mus_playing.handle))
+	{
+		Printf("Music is not a MIDI.\n");
+		return;
+	}
+
+	uint16_t voice  = atoi(argv[1])-1;
+	uint8_t  command = atoi(argv[2]);
+	uint8_t  value = atoi(argv[3]);
+	
+	SetMIDIVoiceVal(mus_playing.handle, voice, command, value);
+}
