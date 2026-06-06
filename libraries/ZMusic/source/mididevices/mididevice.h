@@ -54,6 +54,7 @@ public:
 	virtual SoundStreamInfoEx GetStreamInfoEx() const;
 
 	virtual void SetVoiceControl(uint16_t channel, uint8_t control, uint8_t value) {};
+	virtual void SetProgram(uint16_t channel, int bank) {};
 
 protected:
 	MidiCallback Callback;

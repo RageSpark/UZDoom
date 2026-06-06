@@ -87,7 +87,8 @@ public:
 	bool FakeVolume();
 	bool Pause(bool paused);
 	void InitPlayback() override;
-	bool Update() override;
+	bool  Update() override;
+	void  SetVoiceControl(uint16_t channel, uint8_t control, uint8_t value);
 	void PrecacheInstruments(const uint16_t *instruments, int count);
 	DWORD PlayerLoop();
 	bool CanHandleSysex() const override
@@ -627,6 +628,18 @@ bool WinMIDIDevice::Update()
 	}
 	return true;
 }
+
+//==
+//
+//	WinMIDIDevice::SetVoiceControl
+//
+//==
+
+void WinMIDIDevice::SetVoiceControl(uint16_t channel, uint8_t control, uint8_t value)
+{
+	midiOutShortMsg((HMIDIOUT)MidiOut, MIDI_CTRLCHANGE | channel | (control << 8) | (value << 16));
+}
+
 
 //==========================================================================
 //

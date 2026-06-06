@@ -58,6 +58,7 @@ public:
 	int OpenRenderer() override;
 	std::string GetStats() override;
 	void        SetVoiceControl(uint16_t channel, uint8_t control, uint8_t value) override;
+	void        SetProgram(uint16_t channel, int bank) override;
 	void ChangeSettingInt(const char *setting, int value) override;
 	void ChangeSettingNum(const char *setting, double value) override;
 	void ChangeSettingString(const char *setting, const char *value) override;
@@ -419,6 +420,11 @@ std::string FluidSynthMIDIDevice::GetStats()
 void FluidSynthMIDIDevice::SetVoiceControl(uint16_t channel, uint8_t control, uint8_t value)
 {
 	fluid_synth_cc(FluidSynth, channel, control, value);
+}
+
+void FluidSynthMIDIDevice::SetProgram(uint16_t channel, int bank)
+{
+	fluid_synth_program_change(FluidSynth, channel, bank);
 }
 
 //

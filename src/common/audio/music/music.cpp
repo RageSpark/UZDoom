@@ -1087,15 +1087,20 @@ CCMD(currentmusic)
 
 //
 
-void SetMIDIVoiceControl(uint16_t voice_index, uint8_t control, uint8_t value)
+void SendMIDIControlChange(uint16_t voice_index, uint8_t control, uint8_t value)
 {
+	if (control > 127)
+		control = 127;
+	if (value > 127)
+		value = 127;
+
 	SetMIDIVoiceVal(mus_playing.handle, voice_index, control, value);
 }
 
-CCMD(SetMIDIVoice)
+CCMD(SendMIDIControlChange)
 {
 	int argc = argv.argc();
-	if (argc <= 3 || argc >= 5)
+	if (argc < 4 || argc > 4)
 	{
 		Printf("SetMIDIVoice [voice index] [control change] [value: 0-127]\n");
 		return;
@@ -1117,5 +1122,44 @@ CCMD(SetMIDIVoice)
 	uint8_t  command = atoi(argv[2]);
 	uint8_t  value = atoi(argv[3]);
 	
-	SetMIDIVoiceVal(mus_playing.handle, voice, command, value);
+	SendMIDIControlChange(voice, command, value);
+}
+
+CCMD(ResetMIDIControllers)
+{
+	int argc = argv.argc();
+	if (argc < 2 || argc > 2)
+	{
+		Printf("ResetMIDIControllers [voice index]\n");
+		return;
+	}
+	uint16_t voice = atoi(argv[1]) - 1;
+	SendMIDIControlChange(voice, 121, 127);
+}
+
+CCMD(SetMIDIProgram)
+{
+	int argc = argv.argc();
+	if (argc < 3 || argc > 3)
+	{
+		Printf("SetMIDIProgram [voice index] [instrument]\n");
+		return;
+	}
+
+	if (!mus_playing.name.IsNotEmpty())
+	{
+		Printf("Currently no music playing\n");
+		return;
+	}
+
+	if (!ZMusic_IsMIDI(mus_playing.handle))
+	{
+		Printf("Music is not a MIDI.\n");
+		return;
+	}
+
+	uint16_t voice   = atoi(argv[1]) - 1;
+	int value = atoi(argv[2]);
+
+	SetMIDIProgram(mus_playing.handle, voice, value);
 }

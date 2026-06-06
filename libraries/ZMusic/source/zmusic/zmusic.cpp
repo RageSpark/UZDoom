@@ -579,3 +579,10 @@ DLL_EXPORT void SetMIDIVoiceVal(ZMusic_MusicStream song, uint16_t channel, uint8
 		return;
 	song->SetMIDIVoiceValue(channel, ctrl, value);
 }
+
+DLL_EXPORT void SetMIDIProgram(ZMusic_MusicStream song, uint16_t channel, int bank)
+{
+	if (!song)
+		return;
+	song->SetMIDIProgram(channel, bank);
+}
