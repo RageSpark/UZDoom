@@ -4833,6 +4833,11 @@ enum EACSFunctions
 	-106 : KickFromGame(2),
 	*/
 
+	// SkullTag
+
+	ACSF_ResetMap = 100,
+	ACSF_SetCurrentGamemode = 132,
+
 	ACSF_CheckClass = 200,
 	ACSF_DamageActor, // [arookas]
 	ACSF_SetActorFlag,
@@ -4851,7 +4856,7 @@ enum EACSFunctions
 	ACSF_GetNetID,
 	ACSF_SetActivatorByNetID,
 
-		// Eternity's
+	// Eternity's
 	ACSF_GetLineX = 300,
 	ACSF_GetLineY,
 
@@ -6637,6 +6642,53 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 				return (actor->GetClass()->FindStateByString(statename, exact) != nullptr);
 			}
 			return false;
+		}	
+
+		case ACSF_SetCurrentGamemode:
+			MIN_ARG_COUNT(1);
+		{
+			// TODO remove this from here and put on g_game/g_level
+			const char *name = Level->Behaviors.LookupString(args[0]);
+			// TODO add event handler that replaces these?
+			bool setdeathmatch = false;
+
+			if (stricmp(name, "deathmatch") == 0)
+			{
+				if (deathmatch)
+					return 0;
+
+				if (level.deathmatchstarts.Size() <= 0)
+				{
+					Printf("No Deathmatch Starts");
+					return 0;
+				}
+
+				setdeathmatch = true;
+			}
+			else if (stricmp(name, "cooperative") == 0)
+			{
+				if (level.AllPlayerStarts.Size() <= 0)
+				{
+					Printf("No Player Starts");
+					return 0;
+				}
+			}
+			else
+			{
+				// TODO add event handler that fallback?
+				return 0;
+			}
+			
+			UCVarValue val;
+			val.Bool = setdeathmatch;
+			deathmatch->ForceSet(val, CVAR_Bool);
+
+			multiplayer = true;
+
+			Printf("Switching Gamemode to %s", name);
+
+			Level->ChangeLevel(level.MapName.GetChars(), 0, CHANGELEVEL_RESETHEALTH | CHANGELEVEL_RESETINVENTORY);
+			return true;
 		}
 
 		case ACSF_CheckClass:
