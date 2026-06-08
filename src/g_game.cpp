@@ -3208,7 +3208,6 @@ DEFINE_ACTION_FUNCTION(FLevelLocals, MakeAutoSave)
 // ChangeGamemode
 //
 
-bool FLevelLocals::ChangeGamemode(FName gamemodename) // TODO test on multiplayer
 bool FLevelLocals::ChangeGamemode(FName gamemodename) // TODO add a NextGamemode to ChangeLevel instead?
 {
 	// TODO add event handler that replaces these?
