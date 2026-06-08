@@ -6647,48 +6647,8 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 		case ACSF_SetCurrentGamemode:
 			MIN_ARG_COUNT(1);
 		{
-			// TODO remove this from here and put on g_game/g_level
 			const char *name = Level->Behaviors.LookupString(args[0]);
-			// TODO add event handler that replaces these?
-			bool setdeathmatch = false;
-
-			if (stricmp(name, "deathmatch") == 0)
-			{
-				if (deathmatch)
-					return 0;
-
-				if (level.deathmatchstarts.Size() <= 0)
-				{
-					Printf("No Deathmatch Starts");
-					return 0;
-				}
-
-				setdeathmatch = true;
-			}
-			else if (stricmp(name, "cooperative") == 0)
-			{
-				if (level.AllPlayerStarts.Size() <= 0)
-				{
-					Printf("No Player Starts");
-					return 0;
-				}
-			}
-			else
-			{
-				// TODO add event handler that fallback?
-				return 0;
-			}
-			
-			UCVarValue val;
-			val.Bool = setdeathmatch;
-			deathmatch->ForceSet(val, CVAR_Bool);
-
-			multiplayer = true;
-
-			Printf("Switching Gamemode to %s", name);
-
-			Level->ChangeLevel(level.MapName.GetChars(), 0, CHANGELEVEL_RESETHEALTH | CHANGELEVEL_RESETINVENTORY);
-			return true;
+			return level.ChangeGamemode(name);
 		}
 
 		case ACSF_CheckClass:

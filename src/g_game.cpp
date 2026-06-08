@@ -3204,6 +3204,87 @@ DEFINE_ACTION_FUNCTION(FLevelLocals, MakeAutoSave)
 	return 0;
 }
 
+//
+// ChangeGamemode
+//
+
+bool FLevelLocals::ChangeGamemode(FName gamemodename) // TODO test on multiplayer
+{
+	// TODO add event handler that replaces these?
+	UCVarValue dm;
+	dm.Bool = false;
+
+	if (gamemodename == "deathmatch" || gamemodename == "dm")
+	{
+		if (deathmatch)
+			return false;
+
+		if (deathmatchstarts.Size() <= 0)
+		{
+			Printf("No Deathmatch Starts");
+			return false;
+		}
+
+		dm.Bool = true;
+		gamemodename = "deathmatch";
+	}
+	else if (gamemodename == "cooperative" || gamemodename == "coop")
+	{
+		if (AllPlayerStarts.Size() <= 0)
+		{
+			Printf("No Player Starts");
+			return false;
+		}
+		gamemodename = "cooperative";
+	}
+	else
+	{
+		// TODO add event handler that fallback?
+		return false;
+	}
+
+	deathmatch->ForceSet(dm, CVAR_Bool);
+	multiplayer = true;
+
+	Printf("Switching gamemode to %s", gamemodename.GetChars());
+
+	ChangeLevel(MapName.GetChars(), 0, CHANGELEVEL_RESETHEALTH | CHANGELEVEL_RESETINVENTORY);
+	return true;
+}
+
+DEFINE_ACTION_FUNCTION(FLevelLocals, ChangeGamemode)
+{
+	PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
+	PARAM_NAME(gamemode);
+	self->ChangeGamemode(gamemode);
+	return 0;
+}
+
+CCMD(changegamemode)
+{
+	if (!players[consoleplayer].mo || !usergame)
+	{
+		Printf("Cannot use changegamemode command when not in a game.\n");
+		return;
+	}
+
+	if (!players[consoleplayer].settings_controller && netgame)
+	{
+		Printf("Only setting controllers can change the gamemode.\n");
+		return;
+	}
+
+	int argc = argv.argc();
+
+	if (argc != 2)
+	{
+		Printf("Usage: changegamemode \"gamemode\"");
+		return;
+	}
+
+	level.ChangeGamemode(argv[1]);
+}
+
 DEFINE_GLOBAL(players)
 DEFINE_GLOBAL(playeringame)
 DEFINE_GLOBAL(PlayerClasses)

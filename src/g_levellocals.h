@@ -488,6 +488,8 @@ public:
 
 	void SetMusic();
 
+	bool ChangeGamemode(FName gamemodename);
+
 	TArray<vertex_t> vertexes;
 	TArray<sector_t> sectors;
 	TArray<extsector_t> extsectors; // container for non-trivial sector information. sector_t must be trivially copyable for *_fakeflat to work as intended.
