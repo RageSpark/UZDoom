@@ -162,6 +162,7 @@ enum EDemoCommand
 	DEM_READIED,		// 77
 	DEM_WEAPSELECT,		// 78 Byte: Slot
 	DEM_USEFLECHETTE,	// 79
+	DEM_CHANGEGAMEMODE, // 80 String: Gamemode
 };
 
 // The following are implemented by cht_DoCheat in m_cheat.cpp

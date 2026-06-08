@@ -2689,6 +2689,10 @@ void Net_DoCommand(int cmd, TArrayView<uint8_t>& stream, int player)
 		cht_DoCheat(&players[player], ReadInt8(stream));
 		break;
 
+	case DEM_CHANGEGAMEMODE:
+		primaryLevel->ChangeGamemode(ReadStringConst(stream));
+		break;
+
 	case DEM_CHANGEMAP2:
 		pos = ReadInt8(stream);
 		[[fallthrough]];
