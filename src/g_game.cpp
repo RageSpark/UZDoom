@@ -3278,16 +3278,12 @@ CCMD(changegamemode)
 		return;
 	}
 
-	int argc = argv.argc();
-
-	if (argc != 2)
 	if (argv.argc() != 2)
 	{
 		Printf("Usage: changegamemode \"gamemode\"");
 		return;
 	}
 
-	level.ChangeGamemode(argv[1]);
 	Net_WriteInt8(DEM_CHANGEGAMEMODE); // TODO add a NextGamemode to ChangeLevel instead?
 	Net_WriteString(argv[1]);
 }
