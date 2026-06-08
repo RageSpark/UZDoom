@@ -4835,8 +4835,10 @@ enum EACSFunctions
 
 	// SkullTag
 
-	ACSF_ResetMap = 100,
+	ACSF_ConsolePlayerNumber = 102,
 	ACSF_SetCurrentGamemode = 132,
+
+	//
 
 	ACSF_CheckClass = 200,
 	ACSF_DamageActor, // [arookas]
@@ -6644,11 +6646,14 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			return false;
 		}	
 
+		case ACSF_ConsolePlayerNumber: {
+			return consoleplayer;
+		}
+
 		case ACSF_SetCurrentGamemode:
 			MIN_ARG_COUNT(1);
 		{
-			const char *name = Level->Behaviors.LookupString(args[0]);
-			return level.ChangeGamemode(name);
+			return level.ChangeGamemode(Level->Behaviors.LookupString(args[0]));
 		}
 
 		case ACSF_CheckClass:
