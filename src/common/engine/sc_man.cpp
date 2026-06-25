@@ -57,9 +57,12 @@
 
 // CODE --------------------------------------------------------------------
 
-void VersionInfo::operator=(const char *string)
+VersionInfo::VersionInfo(const char *string)
 {
 	char *endp;
+
+	minor = revision = distance = 0;
+
 	major = (int16_t)clamp<unsigned long long>(strtoull(string, &endp, 10), 0, USHRT_MAX);
 	if (*endp == '.')
 	{
@@ -67,19 +70,38 @@ void VersionInfo::operator=(const char *string)
 		if (*endp == '.')
 		{
 			revision = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
-			if (*endp != 0) major = USHRT_MAX;
+
+			if (*endp == '-' && endp[1] >= '0' && endp[1] <= '9')
+			{
+				distance = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
+			}
 		}
-		else if (*endp == 0)
-		{
-			revision = 0;
-		}
-		else major = USHRT_MAX;
 	}
-	else if (*endp == 0)
+
+	if (*endp != 0 && *endp != '-')
 	{
-		minor = revision = 0;
+		major = USHRT_MAX;
 	}
-	else major = USHRT_MAX;
+}
+
+
+void VersionInfo::operator=(const char *string)
+{
+	(*this) = VersionInfo(string);
+}
+
+VersionInfo::operator FString()
+{
+	FString tmp;
+	if(distance != 0 && distance != RC_REVISION_NOTRC)
+	{
+		tmp.Format("%u.%u.%u-%u", major, minor, revision, distance);
+	}
+	else
+	{
+		tmp.Format("%u.%u.%u", major, minor, revision);
+	}
+	return tmp;
 }
 
 //==========================================================================
@@ -626,6 +648,27 @@ bool FScanner::CheckToken (int token, bool evaluate)
 		UnGet ();
 	}
 	return false;
+}
+
+
+//==========================================================================
+//
+// FScanner :: PeekToken
+//
+// Checks if the next token matches the specified token. Returns true if
+// it does. If it doesn't returns false. Always ungets it.
+//
+//==========================================================================
+
+bool FScanner::PeekToken (int token, bool evaluate)
+{
+	bool ok = false;
+	if (GetToken (evaluate))
+	{
+		ok = (TokenType == token);
+		UnGet ();
+	}
+	return ok;
 }
 
 //==========================================================================
