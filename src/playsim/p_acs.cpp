@@ -4837,6 +4837,7 @@ enum EACSFunctions
 
 	ACSF_ConsolePlayerNumber = 102,
 	ACSF_SetCurrentGamemode = 132,
+	ACSF_GetCurrentGamemode,
 
 	//
 
@@ -6654,6 +6655,18 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			MIN_ARG_COUNT(1);
 		{
 			return level.ChangeGamemode(Level->Behaviors.LookupString(args[0]));
+		}
+
+		case ACSF_GetCurrentGamemode:
+		{
+			const char *gm = "";
+
+			if (deathmatch)
+				gm = "deathmatch";
+			else if (multiplayer)
+				gm = "cooperative";
+
+			return GlobalACSStrings.AddString(gm);
 		}
 
 		case ACSF_CheckClass:
