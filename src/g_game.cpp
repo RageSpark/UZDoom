@@ -3211,9 +3211,9 @@ DEFINE_ACTION_FUNCTION(FLevelLocals, MakeAutoSave)
 bool FLevelLocals::ChangeGamemode(FName gamemodename) // TODO add a NextGamemode to ChangeLevel instead?
 {
 	// TODO add event handler that replaces these?
-	UCVarValue dm;
+	UCVarValue dm, tm;
 	dm.Bool = false;
-	dm.Int = 0;
+	tm.Bool = false;
 
 	if (gamemodename == "deathmatch" || gamemodename == "dm")
 	{
@@ -3227,16 +3227,19 @@ bool FLevelLocals::ChangeGamemode(FName gamemodename) // TODO add a NextGamemode
 		}
 
 		dm.Bool = true;
-		dm.Int = 1;
 		gamemodename = "deathmatch";
 	}
 	else if (gamemodename == "cooperative" || gamemodename == "coop")
 	{
+		if (!deathmatch && multiplayer)
+			return false;
+
 		if (AllPlayerStarts.Size() <= 0)
 		{
 			Printf("No Player Starts");
 			return false;
 		}
+
 		gamemodename = "cooperative";
 	}
 	else
@@ -3246,6 +3249,7 @@ bool FLevelLocals::ChangeGamemode(FName gamemodename) // TODO add a NextGamemode
 	}
 
 	deathmatch->ForceSet(dm, CVAR_Bool);
+	teamplay->ForceSet(tm, CVAR_Bool);
 	multiplayer = true;
 
 	Printf("Switching gamemode to %s", gamemodename.GetChars());
