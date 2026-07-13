@@ -1382,8 +1382,7 @@ OptionMenu "GLLightOptions" protected
 {
 	Title "$GLLIGHTMNU_TITLE"
 
-	Option "$TCMNU_DYNLIGHTS",                  r_dynlights,          OnOff
-	Option "$GLLIGHTMNU_LIGHTSENABLED",         gl_lights,            OnOff
+	Option "$GLLIGHTMNU_LIGHTSENABLED",         r_dynlights,          OnOff
 	Option "$GLLIGHTMNU_LIGHTSPRITES",          gl_light_sprites,     YesNo
 	Option "$GLLIGHTMNU_LIGHTPARTICLES",        gl_light_particles,   YesNo
 	Option "$GLLIGHTMNU_LIGHTSHADOWMAP",        gl_light_shadowmap,   YesNo
@@ -2359,6 +2358,7 @@ OptionMenu "CompatMapMenu" protected
 	Option "$CMPTMNU_PUSHWINDOW",					"compat_pushwindow", "YesNo"
 	Option "$CMPTMNU_CHECKSWITCHRANGE",				"compat_checkswitchrange", "YesNo"
 	Option "$CMPTMNU_RAILINGHACK",					"compat_railing", "YesNo"
+	Option "$CMPTMNU_TRANSFERSECRET",				"compat_transfersecret", "YesNo"
 	Class "CompatibilityMenu"
 }
 
@@ -2934,10 +2934,10 @@ OptionMenu AccessibilityOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_EXTRA"
 	Slider "$ACCMNU_LIGHT_RADIUS", "r_visibility", 0.0, 16.0, 1.0, 1
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
-	Slider "$ACCMNU_DOUBLECLICK_THRESHOLD", "cl_doubleclickthreshold", 100, 1000, 50, 0
-	Tooltip "$ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
-
+	
 	StaticText ""
+	Slider "$ACCMNU_DOUBLECLICK_THRESHOLD", "cl_doubleclickthreshold", 100, 600, 25, 0
+	Tooltip "$ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 	Slider "$DSPLYMNU_QUAKEINTENSITY",         r_quakeintensity,       0.0, 1.0, 0.05, 0, "", 0, Gray, 100, "$VALFORMAT_PERCENT"
 
 	StaticText ""
