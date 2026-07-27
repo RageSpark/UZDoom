@@ -445,6 +445,9 @@ PNamespace *ParseOneScript(const int baselump, ZCCParseState &state)
 		{
 			char *endp;
 			sc.MustGetString();
+
+			state.ParseVersion.prerelease[0] = state.ParseVersion.build[0] = '\0';
+
 			state.ParseVersion.major = (int16_t)clamp<unsigned long long>(strtoull(sc.String, &endp, 10), 0, USHRT_MAX);
 			if (*endp != '.')
 			{

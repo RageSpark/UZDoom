@@ -83,6 +83,8 @@ const char* neterror(void);
 #define neterror() strerror(errno)
 #endif
 
+// TODO: Remove noverification after optfile allows properly handling unverified files.
+FARG(noverification, "Multiplayer", "Allows files over netgames to be mismatched; use with caution. Can only be set by the host.", "", "");
 FARG(host, "Multiplayer", "Designates the machine as the host for a multiplayer game.", "x",
 	"This machine will function as a host for a multiplayer game with x players (including this"
 	" machine). It will wait for other machines to connect using the -join. parameter and then"
@@ -96,7 +98,7 @@ FARG(dup, "Multiplayer", "Send less player movement commands over the network.",
 FARG(port, "Multiplayer", "Specifies an alternative IP port for a network game.", "x",
 	"Specifies an alternate IP port for this machine to use during a network game. By default,"
 	" port 5029 is used.");
-FARG(password, "", "", "",
+FARG(password, "Multiplayer", "Sets a password to be able to join the lobby. Can be up to 255 characters long.", "Password123!@#",
 	"");
 
 // As per http://support.microsoft.com/kb/q192599/ the standard
@@ -265,15 +267,53 @@ static void BuildAddress(sockaddr_in& address, const char* addrName)
 	}
 }
 
+int netInitCount = 0;
+
+void StartNetworkLean()
+{
+	#ifdef _WIN32
+	if (!DebugServer::RuntimeEvents::IsDebugServerRunning())
+	{
+		netInitCount++;
+		if(netInitCount == 1)
+		{
+			WSADATA data;
+			if (WSAStartup(MAKEWORD(2, 2), &data))
+				I_FatalError("Couldn't initialize Windows sockets");
+		}
+	}
+	#else
+	netInitCount++;
+	#endif
+}
+
+static void CloseNetworkLean()
+{
+	if(netInitCount == 0) return;
+	netInitCount--;
+	#ifdef _WIN32
+	if(netInitCount == 0)
+	{
+		if (!DebugServer::RuntimeEvents::IsDebugServerRunning())
+		{
+			WSACleanup();
+		}
+	}
+	#endif
+}
+
+bool IsNetworkStartedLean()
+{
+	#ifdef _WIN32
+	return netInitCount > 0 || DebugServer::RuntimeEvents::IsDebugServerRunning();
+	#else
+	return netInitCount > 0;
+	#endif
+}
+
 static void StartNetwork(bool autoPort)
 {
-#ifdef _WIN32
-	WSADATA data;
-	if (!DebugServer::RuntimeEvents::IsDebugServerRunning()) {
-		if (WSAStartup(0x0101, &data))
-			I_FatalError("Couldn't initialize Windows sockets");
-	}
-#endif
+	if(!IsNetworkStartedLean()) StartNetworkLean();
 
 	netgame = true;
 	multiplayer = true;
@@ -296,11 +336,8 @@ void CloseNetwork()
 		MySocket = INVALID_SOCKET;
 		netgame = false;
 	}
-#ifdef _WIN32
-	if (!DebugServer::RuntimeEvents::IsDebugServerRunning()){
-		WSACleanup();
-	}
-#endif
+
+	CloseNetworkLean();
 }
 
 static void GenerateGameID()
@@ -723,6 +760,7 @@ void HandleIncomingConnection()
 	}
 }
 
+static bool SkipFileVerification = false;
 static bool Host_CheckForConnections(void* connected)
 {
 	const bool forceStarting = I_ShouldStartNetGame();
@@ -798,7 +836,8 @@ static bool Host_CheckForConnections(void* connected)
 			{
 				RejectConnection(from, PRE_BANNED);
 			}
-			else if ((error = Net_VerifyEngine(engineInfo, passwordOffset)).Error != FVerificationError::VE_NONE)
+			else if ((error = Net_VerifyEngine(engineInfo, passwordOffset)).Error != FVerificationError::VE_NONE
+					&& (error.Error == FVerificationError::VE_ENGINE || !SkipFileVerification))
 			{
 				SendVerificationError(from, error);
 			}
@@ -988,6 +1027,9 @@ static bool HostGame(int arg)
 
 	// Wait for the lobby to be full.
 	int connectedPlayers = 1;
+	// TODO: This is a really bad solution, but this will be getting removed after -optfile
+	// can properly handle unverified files, so it will do for now.
+	SkipFileVerification = Args->CheckParm(FArg_noverification);
 	if (!I_NetLoop(Host_CheckForConnections, (void*)&connectedPlayers))
 	{
 		SendAbort();

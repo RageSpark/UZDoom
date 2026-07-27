@@ -33,6 +33,7 @@ class SettingsPage : public Widget
 public:
 	SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo& info);
 	void UpdateLanguage();
+	void UpdateUpdaterValues(bool autoUpdate, bool check, int interval);
 	void SetValues(FStartupSelectionInfo& info) const;
 
 private:
@@ -46,12 +47,15 @@ private:
 	TextLabel* ExtrasLabel = nullptr;
 	TextLabel* LoadLabel = nullptr;
 	CheckboxLabel* FullscreenCheckbox = nullptr;
+	CheckboxLabel* VsyncCheckbox = nullptr;
 	CheckboxLabel* DisableAutoloadCheckbox = nullptr;
 	CheckboxLabel* DontAskAgainCheckbox = nullptr;
 	CheckboxLabel* LightsCheckbox = nullptr;
 	CheckboxLabel* BrightmapsCheckbox = nullptr;
 	CheckboxLabel* WidescreenCheckbox = nullptr;
 	CheckboxLabel* SupportWadsCheckbox = nullptr;
+	CheckboxLabel* DynLightsCheckbox = nullptr;
+	CheckboxLabel* ShadowmapCheckbox = nullptr;
 #ifdef RENDER_BACKENDS
 	TextLabel* BackendLabel = nullptr;
 	CheckboxLabel* VulkanCheckbox = nullptr;
@@ -60,6 +64,12 @@ private:
 #endif
 	ListView* LangList = nullptr;
 	Dropdown* LoadList = nullptr;
+#ifdef HAS_UPDATER
+	TextLabel* UpdaterSettingsLabel = nullptr;
+	TextLabel* UpdaterIntervalLabel = nullptr;
+	Dropdown* UpdaterSettingsDropdown = nullptr;
+	Dropdown* UpdaterIntervalDropdown = nullptr;
+#endif
 
 	TArray<std::pair<FString, FString>> languages;
 	bool hideLanguage = false;

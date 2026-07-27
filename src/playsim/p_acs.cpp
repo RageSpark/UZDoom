@@ -659,9 +659,11 @@ static bool ShouldIgnoreClientSideScript(AActor* activator)
 	return !owner->Level->isConsolePlayer(owner);
 }
 
+// TODO: Disabled until a new flag can be created for UZDoom's specific type of
+// client-side handling. It was breaking too many existing CLIENTSIDE scripts.
 static bool IsClientSideScript(const ScriptPtr& script)
 {
-	return (script.Flags & SCRIPTF_ClientSide);
+	return false;
 }
 
 class DLevelScript : public DObject
@@ -2002,11 +2004,7 @@ bool FBehaviorContainer::CheckAllGood ()
 
 void FBehaviorContainer::UnloadModules ()
 {
-	for (unsigned int i = StaticModules.Size(); i-- > 0; )
-	{
-		delete StaticModules[i];
-	}
-	StaticModules.Clear ();
+	StaticModules.DeleteAndClear();
 }
 
 FBehavior *FBehaviorContainer::GetModule (int lib)
@@ -7035,7 +7033,7 @@ int DLevelScript::RunScript()
 
 	while (state == SCRIPT_Running)
 	{
-		if ( ptr && !(ptr->Flags & SCRIPTF_Busy) && (++runaway > 2000000) )
+		if ( (++runaway > 2000000) && ptr && !(ptr->Flags & SCRIPTF_Busy) )
 		{
 			Printf ("Runaway %s terminated\n", ScriptPresentation(script).GetChars());
 			state = SCRIPT_PleaseRemove;

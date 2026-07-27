@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-01 15:09+0000\n"
+"PO-Revision-Date: 2026-07-04 11:01+0000\n"
 "Last-Translator: yhmtxt <yhmtxt@163.com>\n"
-"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
-"projects/uzdoom/common/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 msgid "PRESSYN"
 msgstr "按Y键确认，按N键取消。"
@@ -264,7 +263,7 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "武器1"
 
 # only show appropriate slots per game
-#
+# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "武器2"
 
@@ -1554,17 +1553,6 @@ msgstr "无搜索结果。"
 msgid "OS_LABEL"
 msgstr "搜索："
 
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "1"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-msgid "REQUIRED_CHARACTERS"
-msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "完整选项菜单"
 
@@ -1681,7 +1669,7 @@ msgstr "记住参数"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr "加载支持的WAD"
+msgstr "加载支持WAD"
 
 msgid "PICKER_TAB_MULTI"
 msgstr "多人游戏"
@@ -1801,3 +1789,6 @@ msgstr "消息队列大小"
 
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "堆叠重复消息"
+
+msgid "$MSGMNU_MESSAGEFADE"
+msgstr "消息淡出时长"

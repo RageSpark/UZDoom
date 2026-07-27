@@ -341,7 +341,7 @@ struct TexMan
 	native static int CheckRealHeight(TextureID tex);
 	native static bool OkForLocalization(TextureID patch, String textSubstitute);
 	native static bool UseGamePalette(TextureID tex);
-	native static Canvas GetCanvas(String texture);
+	native static Canvas GetCanvas(String texture, int usetype = Type_Wall, int flags = 0);
 }
 
 /*
@@ -793,7 +793,7 @@ class Object native
 	private native static Class<Object> BuiltinNameToClass(Name nm, Class<Object> filter);
 	private native static Object BuiltinClassCast(Object inptr, Class<Object> test);
 	private native static Function<void> BuiltinFunctionPtrCast(Function<void> inptr, voidptr newtype);
-	private native static void HandleDeprecatedFlags(Object obj, bool set, int index);
+	private native static bool HandleDeprecatedFlags(Object obj, bool set, int index);
 	private native static bool CheckDeprecatedFlags(Object obj, int index);
 
 	native static Name ValidateNameIndex(int index);

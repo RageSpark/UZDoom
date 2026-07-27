@@ -38,6 +38,7 @@
 #include "name.h"
 #include <inttypes.h>
 #include "filesystem.h"
+#include "versioninfo.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -56,31 +57,6 @@
 // PRIVATE DATA DEFINITIONS ------------------------------------------------
 
 // CODE --------------------------------------------------------------------
-
-void VersionInfo::operator=(const char *string)
-{
-	char *endp;
-	major = (int16_t)clamp<unsigned long long>(strtoull(string, &endp, 10), 0, USHRT_MAX);
-	if (*endp == '.')
-	{
-		minor = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
-		if (*endp == '.')
-		{
-			revision = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
-			if (*endp != 0) major = USHRT_MAX;
-		}
-		else if (*endp == 0)
-		{
-			revision = 0;
-		}
-		else major = USHRT_MAX;
-	}
-	else if (*endp == 0)
-	{
-		minor = revision = 0;
-	}
-	else major = USHRT_MAX;
-}
 
 //==========================================================================
 //
@@ -626,6 +602,27 @@ bool FScanner::CheckToken (int token, bool evaluate)
 		UnGet ();
 	}
 	return false;
+}
+
+
+//==========================================================================
+//
+// FScanner :: PeekToken
+//
+// Checks if the next token matches the specified token. Returns true if
+// it does. If it doesn't returns false. Always ungets it.
+//
+//==========================================================================
+
+bool FScanner::PeekToken (int token, bool evaluate)
+{
+	bool ok = false;
+	if (GetToken (evaluate))
+	{
+		ok = (TokenType == token);
+		UnGet ();
+	}
+	return ok;
 }
 
 //==========================================================================

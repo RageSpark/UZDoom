@@ -2,16 +2,19 @@
 #include "core/timer.h"
 #include "core/colorf.h"
 #include "core/theme.h"
+#include "window/window.h"
 #include <stdexcept>
 #include <cmath>
 #include <algorithm>
 
-Widget::Widget(Widget* parent, WidgetType type, RenderAPI renderAPI, bool windowResizable) : Type(type)
+Widget::Widget(Widget* parent, WidgetType type, RenderAPI renderAPI, struct WindowParams params) : Type(type)
 {
 	if (type != WidgetType::Child)
 	{
 		Widget* owner = parent ? parent->Window() : nullptr;
-		DispWindow = DisplayWindow::Create(this, type == WidgetType::Popup, owner ? owner->DispWindow.get() : nullptr, renderAPI, windowResizable);
+		params.popup = type == WidgetType::Popup;
+		params.utility = type == WidgetType::Utility;
+		DispWindow = DisplayWindow::Create(this, owner ? owner->DispWindow.get() : nullptr, renderAPI, params);
 		if (renderAPI == RenderAPI::Unspecified || renderAPI == RenderAPI::Bitmap)
 		{
 			DispCanvas = Canvas::create();
@@ -1050,4 +1053,11 @@ Colorf Widget::GetStyleColor(const std::string& propertyName) const
 		return std::get<Colorf>(it->second);
 	WidgetStyle* style = WidgetTheme::GetTheme()->GetStyle(StyleClass);
 	return style ? style->GetColor(StyleState, propertyName) : Colorf::transparent();
+}
+
+void Widget::NotifyWindow()
+{
+	Widget* w = Window();
+	if (w && w->DispWindow)
+		w->DispWindow->NotifyWindow();
 }

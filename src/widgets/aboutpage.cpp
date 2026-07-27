@@ -33,6 +33,10 @@
 #include "version.h"
 #include "zstring.h"
 
+#ifdef HAS_UPDATER
+#include "curl_loader.h"
+#endif
+
 AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
 	// [Marcus] TODO: Probably make this rich-text
@@ -87,6 +91,19 @@ AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info
 		Launcher->Pages->SetCurrentIndex(Launcher->Pages->GetPageIndex(Launcher->Release));
 		Launcher->Pages->GetCurrentWidget()->SetFocus();
 	};
+
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded())
+	{
+		ForceUpdate = new PushButton(this);
+		ForceUpdate->SetText(GStrings.GetString("UPDATER_CHECK_FOR_UPDATES"));
+
+		ForceUpdate->OnClick = [=,this]()
+		{
+			static_cast<LauncherWindow*>(Window())->ForceCheckUpdate();
+		};
+	}
+#endif
 }
 
 void AboutPage::SetValues(FStartupSelectionInfo& info) const
@@ -103,14 +120,27 @@ void AboutPage::OnGeometryChanged()
 	double y = 0.0;
 	double w = GetWidth();
 	double h = GetHeight();
-	double tw, th;
+	double tw = 0, th, tx;
 
 	th = Notes->GetPreferredHeight();
-	tw = Notes->GetPreferredWidth();
 	Text->SetFrameGeometry(0.0, y, w, h - th - 8.0);
 	y += h - th;
 
-	Notes->SetFrameGeometry(round((w-tw)/2), y, tw, th);
+	tw += Notes->GetPreferredWidth();
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded()) tw += ForceUpdate->GetPreferredWidth() + 8;
+#endif
+	tx = round((w-tw)/2);
+	tw = Notes->GetPreferredWidth();
+	Notes->SetFrameGeometry(tx, y, tw, th);
+	tx += tw + 8;
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded())
+	{
+		tw = ForceUpdate->GetPreferredWidth();
+		ForceUpdate->SetFrameGeometry(tx, y, tw, th);
+	}
+#endif
 	y += h;
 
 	Launcher->UpdatePlayButton();

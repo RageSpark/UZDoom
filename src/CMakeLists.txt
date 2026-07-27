@@ -86,40 +86,11 @@ if( WIN32 )
 	endif()
 else()
 	if( APPLE )
-		set( NO_GTK ON )
-		set( DYN_GTK OFF )
-
 		# Prevent inclusion of fp.h and FixMath.h from Carbon framework
 		# Declarations from these files are not used but cause the following conflicts:
 		#  - redefinition of 'FixedToFloat' and 'FloatToFixed' macros
 		#  - redefinition of 'pi' as different kind of symbol
 		add_definitions( -D__FP__ -D__FIXMATH__ )
-	else()
-		option( NO_GTK "Disable GTK+ dialogs (Not applicable to Windows)" )
-		option( DYN_GTK "Load GTK+ at runtime instead of compile time" ON )
-
-		# Use GTK+ for the IWAD picker, if available.
-		if( NOT NO_GTK )
-			pkg_check_modules( GTK3 gtk+-3.0 )
-			if( GTK3_FOUND )
-				if( NOT DYN_GTK )
-					set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} ${GTK3_LIBRARIES} )
-				endif()
-				include_directories( SYSTEM ${GTK3_INCLUDE_DIRS} )
-				link_directories( ${GTK3_LIBRARY_DIRS} )
-			else()
-				pkg_check_modules( GTK2 gtk+-2.0 )
-				if( GTK2_FOUND )
-					if( NOT DYN_GTK )
-						set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} ${GTK2_LIBRARIES} )
-					endif()
-					include_directories( SYSTEM ${GTK2_INCLUDE_DIRS} )
-					link_directories( ${GTK2_LIBRARY_DIRS} )
-				else()
-					set( NO_GTK ON )
-				endif()
-			endif()
-		endif()
 	endif()
 
 	if ( NOT WIN32 )
@@ -127,14 +98,6 @@ else()
 		if ( NO_SDL_JOYSTICK )
 			add_definitions( -DNO_SDL_JOYSTICK=1 )
 		endif()
-	endif()
-
-	if( NO_GTK )
-		add_definitions( -DNO_GTK )
-	elseif( DYN_GTK )
-		add_definitions( -DDYN_GTK=1 )
-	else()
-		add_definitions( -DDYN_GTK=0 )
 	endif()
 
 	# Non-Windows version also needs SDL except native OS X backend
@@ -325,8 +288,9 @@ option(BUILD_FLATPAK "Enable Flatpak-specific build options" OFF)
 
 # Update gitinfo.h
 
-add_custom_target( revision_check ALL
+add_custom_target( revision_check
 	COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_SOURCE_DIR}/cmake/UpdateRevision.cmake" "${CMAKE_BINARY_DIR}/gitinfo.h"
+	BYPRODUCTS "${CMAKE_BINARY_DIR}/gitinfo.h"
 	WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 )
 
@@ -341,6 +305,16 @@ list( APPEND PROJECT_LIBRARIES "zwidget" )
 list( APPEND PROJECT_LIBRARIES "webp" )
 
 message("Building for target architecture: ${TARGET_ARCHITECTURE}")
+
+# CURL
+
+if( CURL_FOUND )
+	include_directories( SYSTEM "${CURL_INCLUDE_DIRS}" )
+
+	if( NOT DEFINED LOAD_CURL_AT_RUNTIME OR NOT LOAD_CURL_AT_RUNTIME)
+		set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} ${CURL_LIBRARIES} )
+	endif()
+endif()
 
 # VPX
 
@@ -436,8 +410,7 @@ set( PLAT_SDL_SOURCES
 	common/platform/posix/sdl/sdlglvideo.cpp
 	common/platform/posix/sdl/st_start.cpp )
 set( PLAT_UNIX_SOURCES
-	common/platform/posix/unix/i_specialpaths.cpp
-	common/platform/posix/unix/gtk_dialogs.cpp )
+	common/platform/posix/unix/i_specialpaths.cpp )
 set( PLAT_OSX_SOURCES
 	common/platform/posix/osx/iwadpicker_cocoa.mm
 	common/platform/posix/osx/i_specialpaths.mm
@@ -630,6 +603,8 @@ file( GLOB HEADER_FILES
 	rendering/hwrenderer/*.h
 	rendering/hwrenderer/scene/*.h
 	*.h
+
+	${CMAKE_BINARY_DIR}/gitinfo.h
 )
 
 set ( SWRENDER_SOURCES
@@ -785,6 +760,26 @@ endif()
 
 set (FASTMATH_SOURCES ${FASTMATH_SOURCES})
 
+if (DEFINED USE_UPDATER AND USE_UPDATER)
+	set (UPDATER_SOURCES
+		widgets/updatebuttonbar.cpp
+	)
+
+	add_compile_definitions("HAS_UPDATER")
+else()
+	set (UPDATER_SOURCES "")
+endif()
+
+if (DEFINED CURL_REQUIRED AND CURL_REQUIRED AND DEFINED LOAD_CURL_AT_RUNTIME AND LOAD_CURL_AT_RUNTIME)
+	set (CURL_SOURCES
+		curl_loader.cpp
+	)
+
+	add_compile_definitions("RUNTIME_CURL")
+else()
+	set (CURL_SOURCES "")
+endif()
+
 set (PCH_SOURCES
 	am_map.cpp
 	playsim/bots/b_bot.cpp
@@ -815,6 +810,7 @@ set (PCH_SOURCES
 	hu_scores.cpp
 	m_cheat.cpp
 	m_misc.cpp
+	version.cpp
 	playsim/p_acs.cpp
 	playsim/p_actionfunctions.cpp
 	p_conversation.cpp
@@ -983,6 +979,8 @@ set (PCH_SOURCES
 	widgets/settingspage.cpp
 	widgets/themedata.cpp
 	widgets/widgetresourcedata.cpp
+	${UPDATER_SOURCES}
+	${CURL_SOURCES}
 
 	common/audio/sound/i_sound.cpp
 	common/audio/sound/oalsound.cpp
@@ -1281,11 +1279,14 @@ set( GAME_SOURCES
 set( GAME_NONPCH_SOURCES ${GAME_SOURCES} )
 list( REMOVE_ITEM GAME_NONPCH_SOURCES ${PCH_SOURCES} )
 
-add_executable( zdoom WIN32 MACOSX_BUNDLE ${GAME_SOURCES} )
+add_executable( zdoom MACOSX_BUNDLE ${GAME_SOURCES} )
 
 target_include_directories( zdoom PRIVATE ${CMAKE_BINARY_DIR} )
 
-target_precompile_headers( zdoom PRIVATE g_pch.h )
+option(USE_PCH "Enable Pre-compiled headers" ON)
+if (USE_PCH)
+	target_precompile_headers( zdoom PRIVATE g_pch.h )
+endif()
 
 set_source_files_properties( ${FASTMATH_SOURCES} PROPERTIES COMPILE_FLAGS ${ZD_FASTMATH_FLAG} )
 set_source_files_properties( xlat/parse_xlat.cpp PROPERTIES OBJECT_DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c" )
@@ -1298,12 +1299,16 @@ if (ENABLE_IWYU)
 	find_program(IWYU NAMES include-what-you-use iwyu)
 	if(IWYU)
 		message(STATUS "Using IWYU, found at ${IWYU}")
+		if (USE_PCH)
+			message(WARNING "PCH is known to make IWYU diagnostics fail. Consider disabling PCH with USE_PCH=OFF")
+		endif()
 		set_target_properties(zdoom PROPERTIES
 			CXX_INCLUDE_WHAT_YOU_USE "${IWYU}"
 			"-Xiwyu" "--mapping_file=${CMAKE_SOURCE_DIR}/tools/iwyu.imp"
 		)
+		set_source_files_properties(utility/name.cpp PROPERTIES SKIP_LINTING ON)
 	else()
-		message(WARNING "IWYU not found.")
+		message(STATUS "IWYU not found. Diagnostics disabled")
 	endif()
 endif()
 
@@ -1323,7 +1328,7 @@ if( UNIX )
 	endif()
 endif()
 
-target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash)
+target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash )
 include_directories(
 	BEFORE
 	.
@@ -1391,8 +1396,6 @@ include_directories(
 	${SYSTEM_SOURCES_DIR}
 )
 
-add_dependencies( zdoom revision_check )
-
 set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
 set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
 
@@ -1403,9 +1406,11 @@ endif()
 if( MSVC )
 	option ( CONSOLE_MODE "Compile as a console application" OFF )
 	if ( CONSOLE_MODE )
-		set ( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE /ENTRY:wmainCRTStartup" )
+		set_target_properties( zdoom PROPERTIES WIN32_EXECUTABLE FALSE )
+		target_link_options( zdoom PRIVATE "/ENTRY:wmainCRTStartup" )
 	else()
-		set ( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup" )
+		set_target_properties( zdoom PROPERTIES WIN32_EXECUTABLE TRUE )
+		target_link_options( zdoom PRIVATE "/ENTRY:wWinMainCRTStartup" )
 	endif()
 
 	option( ZDOOM_GENERATE_MAPFILE "Generate .map file for debugging." OFF )
@@ -1567,6 +1572,8 @@ endif()
 install(TARGETS zdoom
 		DESTINATION ${INSTALL_PATH}
 		COMPONENT "Game executable")
+
+add_dependencies( zdoom revision_check )
 
 source_group("Audio Files" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/sound/.+")
 source_group("Game Data" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/gamedata/.+")

@@ -145,13 +145,24 @@ public:
 	virtual void OnWindowActivated() = 0;
 	virtual void OnWindowDeactivated() = 0;
 	virtual void OnWindowDpiScaleChanged() = 0;
+	virtual void OnWindowNotified() = 0;
 	virtual bool OnFileDrop(std::string path) = 0;
+};
+
+struct WindowParams {
+	bool utility = false;
+	bool popup = false;
+	struct { unsigned width = 320; unsigned height = 200; } size;
+	bool resizable = true;
+	struct { unsigned width = 0; unsigned height = 0; } minSize;
+	struct { unsigned width = 0; unsigned height = 0; } maxSize;
+	bool centered = true;
 };
 
 class DisplayWindow
 {
 public:
-	static std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable);
+	static std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams params);
 
 	static void ProcessEvents();
 	static void RunLoop();
@@ -209,6 +220,8 @@ public:
 
 	virtual std::vector<std::string> GetVulkanInstanceExtensions() = 0;
 	virtual VkSurfaceKHR CreateVulkanSurface(VkInstance instance) = 0;
+
+	virtual void NotifyWindow() = 0;
 };
 
 class DisplayBackend
@@ -227,7 +240,7 @@ public:
 	virtual bool IsWin32() { return false; }
 	virtual bool IsSDL2() { return false; }
 
-	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable) = 0;
+	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams) = 0;
 	virtual void ProcessEvents() = 0;
 	virtual void RunLoop() = 0;
 	virtual void ExitLoop() = 0;

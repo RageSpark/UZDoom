@@ -639,6 +639,9 @@ msgstr ""
 msgid "MSGMNU_MESSAGEQUEUE"
 msgstr ""
 
+msgid "$MSGMNU_MESSAGEFADE"
+msgstr ""
+
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr ""
 
@@ -1543,12 +1546,6 @@ msgid "OS_NO_RESULTS"
 msgstr ""
 
 msgid "OS_LABEL"
-msgstr ""
-
-msgid "USE_GENERIC_FONT"
-msgstr ""
-
-msgid "REQUIRED_CHARACTERS"
 msgstr ""
 
 msgid "OPTMNU_FULLOPTIONS"

@@ -19,7 +19,8 @@ enum class WidgetType
 {
 	Child,
 	Window,
-	Popup
+	Popup,
+	Utility
 };
 
 enum class WidgetEvent
@@ -32,7 +33,7 @@ enum class WidgetEvent
 class Widget : DisplayWindowHost
 {
 public:
-	Widget(Widget* parent = nullptr, WidgetType type = WidgetType::Child, RenderAPI api = RenderAPI::Unspecified, bool windowResizable = true);
+	Widget(Widget* parent = nullptr, WidgetType type = WidgetType::Child, RenderAPI api = RenderAPI::Unspecified, struct WindowParams = {});
 	virtual ~Widget();
 
 	void SetParent(Widget* parent);
@@ -192,6 +193,9 @@ protected:
 	virtual void OnSetFocus() { }
 	virtual void OnLostFocus() { }
 	virtual void OnEnableChanged() { }
+	void OnWindowNotified() override {};
+
+	void NotifyWindow(); // used to wake up a window from another thread
 
 	virtual void Notify(Widget* source, const WidgetEvent type) { };
 
