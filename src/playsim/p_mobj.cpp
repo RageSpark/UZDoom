@@ -5149,7 +5149,9 @@ void AActor::Tick ()
 		if (Level->time & 31)
 			return;
 
-		if (pr_nightmarerespawn() > RespawnDice)
+		RespawnDice = clamp(RespawnDice, 0, 255);
+
+		if (pr_nightmarerespawn() < 255 - RespawnDice)
 			return;
 
 		P_NightmareRespawn (this);
@@ -5714,7 +5716,7 @@ void AActor::HandleSpawnFlags ()
 		{
 			Level->total_monsters--;
 		}
-		
+
 		flags |= MF_FRIENDLY;
 		flags &= ~MF_COUNTKILL;
 	}
@@ -5743,9 +5745,9 @@ void AActor::HandleSpawnFlags ()
 		{
 			Level->total_monsters--;
 		}
-		
+
 		flags &= ~MF_COUNTKILL;
-		
+
 		if (flags & MF_COUNTITEM)
 		{
 			flags &= ~MF_COUNTITEM;
