@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-05 22:16-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: python 3.14.4 polib 1.2.0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "按Y键确认，按N键取消。"
@@ -49,12 +49,6 @@ msgstr ""
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "%s 作弊了"
-
-msgid "MSGOFF"
-msgstr "消息：关闭"
-
-msgid "MSGON"
-msgstr "消息：开启"
 
 msgid "TXT_SAY"
 msgstr "发言："
@@ -263,7 +257,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "武器1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "武器2"
 
@@ -979,7 +972,7 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1008,9 +1001,6 @@ msgstr "MAME YM2608"
 
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
-
-msgid "OPTVAL_NUKEDOPL3174"
-msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr "Nuked OPN2 (YM3438)"
@@ -1454,34 +1444,34 @@ msgstr "编辑环境"
 msgid "REVMNU_NEW"
 msgstr "新建环境"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "反射比例"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "反射延迟比例"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "衰减时间比例"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "衰减HF限制"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "混响比例"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "混响延迟比例"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "回声时间比例"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "调制时间比例"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "基于"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "名称"
 
 msgid "REVMNU_ID_1"
@@ -1490,16 +1480,16 @@ msgstr "ID #1"
 msgid "REVMNU_ID_2"
 msgstr "ID #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "创建"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "保存…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "文件名"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "保存环境"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1598,9 +1588,6 @@ msgstr "通用"
 msgid "PICKER_EXTRA"
 msgstr "附加图像"
 
-msgid "PICKER_FULLSCREEN"
-msgstr "全屏"
-
 msgid "PICKER_NOAUTOLOAD"
 msgstr "禁用自动加载"
 
@@ -1669,7 +1656,7 @@ msgstr "记住参数"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr "加载支持的WAD"
+msgstr "加载支持WAD"
 
 msgid "PICKER_TAB_MULTI"
 msgstr "多人游戏"
@@ -1789,3 +1776,118 @@ msgstr "消息队列大小"
 
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "堆叠重复消息"
+
+msgid "MSGMNU_MESSAGEFADE"
+msgstr "消息淡出时长"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "环境大小"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "环境传播"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "房间"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "房间HF"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "房间LF"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "衰减时间"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "衰减HF率"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "衰减LF率"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "反射"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "反射延迟"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "反射X定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "反射Y定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "反射Z定位"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "混响"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "混响延迟"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "混响X定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "混响Y定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "混响Z定位"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "回声时间"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "回声深度"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "调制时间"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "调制深度"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "空气吸收HF"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF参考值"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF参考值"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "房间滚降因子"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "传播"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "密度"

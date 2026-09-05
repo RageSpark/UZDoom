@@ -98,7 +98,7 @@ level_info_t *FindLevelInfo (const char *mapname, bool allowdefault)
 		if (TheDefaultLevelInfo.LevelName.IsEmpty())
 		{
 			TheDefaultLevelInfo.SkyPic2 = TheDefaultLevelInfo.SkyPic1 = "SKY1";
-			TheDefaultLevelInfo.SkyMistPic = "SKYMIST1";
+			TheDefaultLevelInfo.SkyMistPic = "SKYMISTA";
 			TheDefaultLevelInfo.LevelName = "Unnamed";
 		}
 		return &TheDefaultLevelInfo;
@@ -258,7 +258,7 @@ void level_info_t::Reset()
 	NextMap = "";
 	NextSecretMap = "";
 	SkyPic1 = SkyPic2 = "-NOFLAT-";
-	SkyMistPic = "SKYMIST1";
+	SkyMistPic = "SKYMISTA";
 	cluster = 0;
 	partime = 0;
 	sucktime = 0;
@@ -2756,14 +2756,16 @@ void G_ParseMapInfo(FString basemapinfo)
 				         COMPATF_DEHHEALTH | COMPATF_CROSSDROPOFF | COMPATF_LIGHT | COMPATF_MASKEDMIDTEX |
 				         COMPATF_LIMITPAIN | COMPATF_INVISIBILITY | COMPATF_VILEGHOSTS;
 
-				flags2 = COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS;
+				flags2 = COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS |
+			             COMPATF2_RESERVEDLINEFLAG;
 				break;
 			case COMPLVL_BOOM:
 				Printf("Applied Boom compatibility level.\n");
 				flags1 = COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP |
 				         COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
 
-				flags2 = COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS | COMPATF2_TRANSFERSECRET;
+				flags2 = COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS |
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
 				break;
 			case COMPLVL_MBF:
 				Printf("Applied MBF compatibility level.\n");
@@ -2772,7 +2774,7 @@ void G_ParseMapInfo(FString basemapinfo)
 				         COMPATF_INVISIBILITY;
 
 				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
-				         COMPATF2_TRANSFERSECRET;
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
 				break;
 			case COMPLVL_MBF21:
 				Printf("Applied MBF21 compatibility level.\n");
@@ -2780,7 +2782,7 @@ void G_ParseMapInfo(FString basemapinfo)
 				         COMPATF_MUSHROOM | COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
 
 				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
-				         COMPATF2_TRANSFERSECRET;
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
 				break;
 		}
 	}

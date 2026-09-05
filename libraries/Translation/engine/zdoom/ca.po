@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-06 22:01+0000\n"
-"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Prem una tecla."
@@ -277,35 +277,11 @@ msgstr "Canvi de música"
 msgid "STSTR_NOMUS"
 msgstr "Selecció impossible"
 
-msgid "STSTR_DQDON"
-msgstr "Mode invulnerable: ON"
-
-msgid "STSTR_DQDOFF"
-msgstr "Mode invulnerable: OFF"
-
-msgid "STSTR_DQD2ON"
-msgstr "Mode invulnerable definitiu: ON"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Mode invulnerable definitiu: OFF"
-
 msgid "STSTR_KFAADDED"
 msgstr "Munició molt feliç afegida"
 
 msgid "STSTR_FAADDED"
 msgstr "Munició afegida (sense claus)"
-
-msgid "STSTR_NCON"
-msgstr "Mode travessar parets: ON"
-
-msgid "STSTR_NCOFF"
-msgstr "Mode travessar parets: OFF"
-
-msgid "STSTR_NC2ON"
-msgstr "Mode travessar parets 3D: ON"
-
-msgid "STSTR_NC2OFF"
-msgstr "Mode travessar parets 3D: OFF"
 
 msgid "STSTR_BEHOLD"
 msgstr "Invuln., Força, Invis., Rad., Tot el mapa o Amplificador"
@@ -319,47 +295,17 @@ msgstr "...no fa pena - GM"
 msgid "STSTR_CLEV"
 msgstr "Canviant de nivell…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Mode Buda: ON"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Mode Buda: OFF"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Mode Buda definitiu: ON"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Mode Buda definitiu: OFF"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Poder: ON"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Poder: OFF"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Salut completa"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Totes les claus"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Depuració de so: ON"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Depuració de so: OFF"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Intentant fer trampes, eh? Ara mors!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Trampós: no et mereixes armes"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: ON"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: OFF"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Ho has aconseguit"
@@ -370,12 +316,6 @@ msgstr "Has aconseguit el toc de Mides, nano"
 msgid "TXT_GOTSTUFF"
 msgstr "Has aconseguit les coses!"
 
-msgid "TXT_FREEZEON"
-msgstr "Mode congelació: ON"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Mode congelació: OFF"
-
 msgid "TXT_STRANGE"
 msgstr "Estrany…"
 
@@ -385,35 +325,17 @@ msgstr "Et sents encara més estrany."
 msgid "TXT_NOTSTRANGE"
 msgstr "Això no té res d’estrany."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Botes de plom: ON"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Botes de plom: OFF"
-
 msgid "TXT_LIGHTER"
 msgstr "Et sents més lleuger"
 
 msgid "TXT_GRAVITY"
 msgstr "La gravetat et pesa"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Sense objectiu: ON"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Sense objectiu: OFF"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "«Tremoleu de por!»"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "S’ha acabat l’armadura d’ogre"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Càmera en tercera persona: ON"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Càmera en tercera persona: OFF"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 enemic eliminat"
@@ -438,24 +360,6 @@ msgstr "Què vols matar fora d’una partida?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Propietats de jugador congelades: OFF"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Mode seguiment: OFF"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Mode seguiment: ON"
-
-msgid "AMSTR_GRIDON"
-msgstr "Graella: ON"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Graella: OFF"
-
-msgid "AMSTR_TEXON"
-msgstr "Mode textures: ON"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Mode textures: OFF"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Punt marcat"
@@ -1791,7 +1695,8 @@ msgid "OB_HERESIARCH"
 msgstr "%o ha mort per culpa de Heresiarca."
 
 msgid "OB_MPFWEAPFIST"
-msgstr "%o va ser apallissat fins a convertir-lo en pols pels punys nus de %k."
+msgstr ""
+"%o va ser apallissat fins a convertir-lo en pols pels punys nus de %k."
 
 msgid "OB_MPFWEAPAXE"
 msgstr "%o va aconseguir la destral de %k."
@@ -1830,7 +1735,8 @@ msgid "OB_MPMWEAPLIGHTNING"
 msgstr "%o va rebre una revelació impactant de %k."
 
 msgid "OB_MPMWEAPBLOODSCOURGE"
-msgstr "%o va ser esborrat de la faç de l'univers pel Flagell Sanguinari de %k."
+msgstr ""
+"%o va ser esborrat de la faç de l'univers pel Flagell Sanguinari de %k."
 
 msgid "TXT_METALARMOR"
 msgstr "Has agafat l'Armadura de metall."
@@ -2757,7 +2663,7 @@ msgstr "Fantàstic"
 
 msgid "CLOADNET"
 msgstr ""
-"No pots carregar mentre estàs en una missió de xarxa!\n"
+"No pots carregar una partida desada mentre estàs en una missió de xarxa!\n"
 "\n"
 "Prem una tecla."
 
@@ -2821,14 +2727,6 @@ msgstr ""
 "Segur que vols acabar la missió?\n"
 "\n"
 "Prem Y o N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Mode invencible: ON"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Mode invencible: OFF"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -4312,7 +4210,7 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr "Llums dinàmiques"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Lightsenabled"
+msgstr "Llums dinàmiques"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Lightsprites"
@@ -4491,9 +4389,6 @@ msgstr "Filtre d’ampliació"
 msgid "TCMNU_MIPMAP"
 msgstr "Mipmapping"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Llums dinàmics"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Showkeys Always"
 
@@ -4528,10 +4423,14 @@ msgid "TXT_OTHERENGINESG"
 msgstr "La partida desada «%s» és d’un altre motor basat en ZDoom:"
 
 msgid "TXT_TOOOLDSG"
-msgstr "La partida desada «%s» és d’una versió massa antiga (%d). La versió més antiga admesa és %e."
+msgstr ""
+"La partida desada «%s» és d’una versió massa antiga (%d). La versió més "
+"antiga admesa és %e."
 
 msgid "TXT_TOONEWSG"
-msgstr "La partida desada «%s» és d’una versió més nova (%d). La versió més alta admesa és %e."
+msgstr ""
+"La partida desada «%s» és d’una versió més nova (%d). La versió més alta "
+"admesa és %e."
 
 msgid "TXT_NOMAPSG"
 msgstr "A la partida desada «%s» li falta el mapa actual."
@@ -5087,10 +4986,14 @@ msgid "ACCMNU_LIGHT_EXTRA"
 msgstr "Il·luminació extra"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
-msgstr "Controla la distància del radi de llum al voltant del jugador en unitats de mapa. Els valors més alts fan que l’escena sigui més clara."
+msgstr ""
+"Controla la distància del radi de llum al voltant del jugador en unitats de "
+"mapa. Els valors més alts fan que l’escena sigui més clara."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
-msgstr "Quantitat de llum de sector que s’afegeix per sobre dels nivells de llum existents, conservant el mode d’il·luminació actual."
+msgstr ""
+"Quantitat de llum de sector que s’afegeix per sobre dels nivells de llum "
+"existents, conservant el mode d’il·luminació actual."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Radi de llum del jugador"
@@ -5129,25 +5032,38 @@ msgid "DSPLYMNU_IMAGEADJUST_TOP3"
 msgstr "Desactiva’ls abans d’ajustar."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
-msgstr "Compensa les limitacions del monitor. Ajusta-ho fins que els blocs grisos verticals s’esvaeixin. No ho facis servir per fer el joc més clar, només per assegurar que la imatge estigui calibrada per a la teva configuració."
+msgstr ""
+"Compensa les limitacions del monitor. Ajusta-ho fins que els blocs grisos "
+"verticals s’esvaeixin. No ho facis servir per fer el joc més clar, només per"
+" assegurar que la imatge estigui calibrada per a la teva configuració."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Compensació del punt negre"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
-msgstr "Compensa els monitors que no mostren correctament els píxels foscos. Ajusta-ho fins que els blocs blancs diagonals s’esvaeixin. No ho facis servir per fer el joc més clar, només per assegurar que la imatge estigui calibrada per a la teva configuració."
+msgstr ""
+"Compensa els monitors que no mostren correctament els píxels foscos. Ajusta-"
+"ho fins que els blocs blancs diagonals s’esvaeixin. No ho facis servir per "
+"fer el joc més clar, només per assegurar que la imatge estigui calibrada per"
+" a la teva configuració."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "Restableix totes les opcions d’aquest menú als valors predeterminats."
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
-msgstr "Aplica un ajust lineal de brillantor. Ajusta-ho al teu gust o per veure-hi a les zones fosques."
+msgstr ""
+"Aplica un ajust lineal de brillantor. Ajusta-ho al teu gust o per veure-hi a"
+" les zones fosques."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
-msgstr "Ajusta la diferència percebuda entre colors semblants. Controla com de nítides o esvaïdes es veuen les imatges. Ajusta-ho al teu gust."
+msgstr ""
+"Ajusta la diferència percebuda entre colors semblants. Controla com de "
+"nítides o esvaïdes es veuen les imatges. Ajusta-ho al teu gust."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
-msgstr "Ajusta la intensitat dels colors, fent que la imatge sembli més viva o més apagada. Ajusta-ho al teu gust."
+msgstr ""
+"Ajusta la intensitat dels colors, fent que la imatge sembli més viva o més "
+"apagada. Ajusta-ho al teu gust."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Ajusta-ho fins que això sembli un color gris uniforme."
@@ -5306,4 +5222,185 @@ msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
 msgstr "Llindar de doble clic"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
-msgstr "Temps entre premudes successives per activar un esdeveniment de doble clic"
+msgstr ""
+"Temps entre premudes successives per activar un esdeveniment de doble clic"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automàtic (preferible ZDoom)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automàtic (preferiblement vainilla)"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Cercar actualitzacions"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Demana per instal·lar"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Configuració de l'actualitzador"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Comprova cada:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Nova actualització disponible"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Saltar actualització"
+
+msgid "UPDATER_TITLE"
+msgstr "Verificador de l'actualització"
+
+msgid "UPDATER_DISABLE"
+msgstr "Desactivar comprovació d'actualitzacions"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Comprovació d'actualització fallada"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Actualització fallada"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Sí, i demanar si s'instal·len actualitzacions"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Sortir de l'actualització?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Vols que automàticament es cerquin actualitzacions\n"
+"(això es pot canviar més tard a la pestanya d'opcions)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Cada quan vols que es cerquin actualitzacions?\n"
+"(això pot ser canviat en la pestanya d'opcions)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Fallada en obrir fitxer zip"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr ""
+"Fallada en l'extracció del zip, error: '{}' mentre s'escriu fitxer '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Actualitzant..."
+
+msgid "UPDATER_STARTING"
+msgstr "Començant descàrrega..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Actualitació satisfactòria, el llançador ara es reiniciarà."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Tot al dia!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "L'actualització s'ha cancel·lat"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "Actualització invàlida de JSON"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' no és un directori"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Desactivar"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Avisar"
+
+msgid "OPTVAL_DAILY"
+msgstr "Diari"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Setmanal"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Mensual"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Descarregant"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Experimental"
+
+msgid "TXT_UPDATE"
+msgstr "Actualització"
+
+msgid "TXT_UPDATED"
+msgstr "Actualitzat"
+
+msgid "TXT_CANCELLED"
+msgstr "Cancel·lat"
+
+msgid "TXT_BACK"
+msgstr "Enrera"
+
+msgid "TXT_DISMISS"
+msgstr "Abandonar"
+
+msgid "TXT_SKIP"
+msgstr "Saltar"
+
+msgid "TXT_CONFIRM"
+msgstr "Confirmar"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Mode invulnerable: {ON|OFF}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Mode invulnerable definitiu: {ON|OFF}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Mode travessar parets: {ON|OFF}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Mode travessar parets 3D: {ON|OFF}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Mode Buda: {ON|OFF}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Mode Buda definitiu: {ON|OFF}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Poder: {ON|OFF}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Depuració de so: {ON|OFF}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {ON|OFF}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Mode congelació: {ON|OFF}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Botes de plom: {ON|OFF}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Sense objectiu: {ON|OFF}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Càmera en tercera persona: {ON|OFF}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Mode seguiment: {ON|OFF}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Graella: {ON|OFF}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Mode textures: {ON|OFF}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Mode invencible: {ON|OFF}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Missatges: {ON|OFF}"

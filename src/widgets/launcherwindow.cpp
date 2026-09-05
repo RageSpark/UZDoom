@@ -49,7 +49,7 @@ bool LauncherWindow::ExecModal(FStartupSelectionInfo& info)
 			info.LauncherHeight>0? info.LauncherHeight: 800,
 		},
 		.resizable = true,
-		.minSize = { 550, 450 },
+		.minSize = { 550, 485 },
 		.centered = true,
 	});
 
@@ -71,7 +71,7 @@ LauncherWindow::LauncherWindow(FStartupSelectionInfo& info, struct WindowParams 
 	Buttonbar = new LauncherButtonbar(this);
 	Buttonbar->SetStyleColor("background-color", Theme::getMain(COLOR_BACKGROUND));
 
-	bool releasenotes = info.isNewRelease && info.notifyNewRelease;
+	bool releasenotes = info.displayRelease && info.notifyNewRelease;
 
 	PlayGame = new PlayGamePage(this, info);
 	Settings = new SettingsPage(this, info);
@@ -152,25 +152,27 @@ bool LauncherWindow::IsHosting() const
 	return IsInMultiplayer() && Network->IsInHost();
 }
 
-void LauncherWindow::Start()
+void LauncherWindow::SetValues()
 {
 	Info->bNetStart = IsInMultiplayer();
 
 	Settings->SetValues(*Info);
-	if (Info->bNetStart)
-		Network->SetValues(*Info);
-	else
-		PlayGame->SetValues(*Info);
-
+	Network->SetValues(*Info);
+	PlayGame->SetValues(*Info);
 	if (Release)
 		Release->SetValues(*Info);
+}
 
+void LauncherWindow::Start()
+{
+	SetValues();
 	ExecResult = true;
 	DisplayWindow::ExitLoop();
 }
 
 void LauncherWindow::Exit()
 {
+	SetValues();
 	ExecResult = false;
 	DisplayWindow::ExitLoop();
 }
@@ -215,7 +217,7 @@ void LauncherWindow::OnGeometryChanged()
 	double top = Banner->GetPreferredHeight();
 	double bottom = GetHeight();
 
-	if (top > bottom/3) top = 0;
+	if (top > bottom*0.29) top = 0;
 
 	Banner->SetFrameGeometry(0, 0, GetWidth(), top);
 

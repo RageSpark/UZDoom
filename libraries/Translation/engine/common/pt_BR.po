@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-05 22:16-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/uzdoom/common/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: python 3.14.4 polib 1.2.0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Aperte Y ou N."
@@ -49,12 +49,6 @@ msgstr ""
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "%s está trapaceando"
-
-msgid "MSGOFF"
-msgstr "Mensagens: DESATIVADAS"
-
-msgid "MSGON"
-msgstr "Mensagens: ATIVADAS"
 
 msgid "TXT_SAY"
 msgstr "Dizer:"
@@ -264,7 +258,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Arma 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Arma 2"
 
@@ -308,9 +301,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Item anterior"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Peronalizar comandos do mapa"
+msgstr "Personalizar comandos do mapa"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Comandos do mapa"
@@ -991,7 +983,7 @@ msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
 #, fuzzy
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 #, fuzzy
@@ -1022,37 +1014,34 @@ msgid "OPTVAL_NP2OPNA"
 msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
+msgstr "MAME YM2608"
 
 msgid "OPTVAL_OPALOPL3"
-msgstr ""
-
-msgid "OPTVAL_NUKEDOPL3174"
-msgstr ""
+msgstr "Opal OPL3"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr ""
+msgstr "Nuked OPN2 (YM3438)"
 
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr ""
+msgstr "Nuked OPN2 (YM2612)"
 
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM2612) (pesado)"
 
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM3438) (pesado)"
 
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr ""
+msgstr "OPN2-LLE (YMF276) (pesado)"
 
 msgid "OPTVAL_GENSOPN2"
-msgstr ""
+msgstr "GENS OPN2 (YM2612)"
 
 msgid "OPTVAL_YMFMOPN2"
-msgstr ""
+msgstr "YMFM OPN2"
 
 msgid "OPTVAL_YMFMOPNA"
-msgstr ""
+msgstr "YMFM OPNA"
 
 msgid "ADLVLMODEL_AUTO"
 msgstr "Automático (usar definições de banco)"
@@ -1076,13 +1065,13 @@ msgid "ADLVLMODEL_DMX"
 msgstr "DMX (preciso, com bug de AM)"
 
 msgid "OPNVLMODEL_DMX"
-msgstr ""
+msgstr "Como DMX"
 
 msgid "ADLVLMODEL_APOGEE"
 msgstr "Apogee (preciso, com bug de AM)"
 
 msgid "OPNVLMODEL_APOGEE"
-msgstr ""
+msgstr "Como Apogee Sound System"
 
 msgid "OPNVLMODEL_WIN9X"
 msgstr "Estilo Win9X"
@@ -1109,31 +1098,31 @@ msgid "ADLVLMODEL_HMIOLD"
 msgstr "SOS HMI (antigo, com bugs)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr ""
+msgstr "Automático"
 
 msgid "ADLCHANALLOC_OFFDELAY"
-msgstr ""
+msgstr "Atraso medido após som"
 
 msgid "ADLCHANALLOC_SAMEINST"
-msgstr ""
+msgstr "Reusar primeiro liberado do mesmo instrumento"
 
 msgid "ADLCHANALLOC_ANYREL"
-msgstr ""
+msgstr "Reusar qualquer primeira nota liberada"
 
 msgid "OPTVAL_UNLIMITED"
 msgstr "Sem limites"
 
 msgid "OPTVAL_256K"
-msgstr ""
+msgstr "256K"
 
 msgid "OPTVAL_512K"
-msgstr ""
+msgstr "512K"
 
 msgid "OPTVAL_768K"
-msgstr ""
+msgstr "768K"
 
 msgid "OPTVAL_1024K"
-msgstr ""
+msgstr "1024K"
 
 msgid "OPTVAL_UNCHARTED2"
 msgstr "Uncharted 2"
@@ -1221,7 +1210,7 @@ msgid "GLPREFMNU_FOGMODE"
 msgstr "Modo de neblina"
 
 msgid "OPTVAL_RADIAL"
-msgstr ""
+msgstr "Radial"
 
 msgid "OPTVAL_STANDARD"
 msgstr "Padrão"
@@ -1242,25 +1231,25 @@ msgid "OPTVAL_NONETRILINEAR"
 msgstr "Nenhum (trilinear)"
 
 msgid "OPTVAL_BILINEAR"
-msgstr ""
+msgstr "Bilinear"
 
 msgid "OPTVAL_TRILINEAR"
-msgstr ""
+msgstr "Trilinear"
 
 msgid "OPTVAL_2X"
-msgstr ""
+msgstr "2×"
 
 msgid "OPTVAL_4X"
-msgstr ""
+msgstr "4×"
 
 msgid "OPTVAL_8X"
-msgstr ""
+msgstr "8×"
 
 msgid "OPTVAL_16X"
-msgstr ""
+msgstr "16×"
 
 msgid "OPTVAL_32X"
-msgstr ""
+msgstr "32×"
 
 msgid "GLTEXMNU_TITLE"
 msgstr "Opções de Textura"
@@ -1362,7 +1351,7 @@ msgid "VIDMNU_ASPECT219"
 msgstr "Proporção 21:9"
 
 msgid "OPTVAL_NORMAL"
-msgstr ""
+msgstr "Normal"
 
 # This describes vid_scalemode 1, which represents the lowest possible scaling
 # to fill the allocated screen area
@@ -1474,52 +1463,52 @@ msgstr "Editar ambiente"
 msgid "REVMNU_NEW"
 msgstr "Novo ambiente"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Escala de reflexos"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Escala de atraso de reflexos"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Escala de tempo de decaimento"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Limite de decaimento em alta freq"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Escala de reverberação"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Escala de atraso de reverberação"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Escala de tempo de eco"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Escala de tempo de modulação"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Baseado em"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Nome"
 
 msgid "REVMNU_ID_1"
-msgstr ""
+msgstr "ID #1"
 
 msgid "REVMNU_ID_2"
-msgstr ""
+msgstr "ID #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Criar"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Salvar…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Nome do arquivo"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Ambientes para salvar"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1550,7 +1539,7 @@ msgid "OPTVAL_HQNX"
 msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
-msgstr ""
+msgstr "hqNx MMX"
 
 msgid "OPTVAL_NXBRZ"
 msgstr "xBRZ"
@@ -1601,7 +1590,7 @@ msgid "TXT_SAVEGAMENEEDS"
 msgstr "Este jogo salvo precisa destes arquivos"
 
 msgid "GLPREFMNU_CORONAS"
-msgstr ""
+msgstr "Coronas"
 
 msgid "PICKER_SELECT"
 msgstr "Selecione qual arquivo de jogo rodar."
@@ -1618,9 +1607,6 @@ msgstr "Geral"
 msgid "PICKER_EXTRA"
 msgstr "Gráficos extras"
 
-msgid "PICKER_FULLSCREEN"
-msgstr "Tela cheia"
-
 msgid "PICKER_NOAUTOLOAD"
 msgstr "Desativar autocarregam"
 
@@ -1631,10 +1617,10 @@ msgid "PICKER_LIGHTS"
 msgstr "Luzes"
 
 msgid "PICKER_BRIGHTMAPS"
-msgstr ""
+msgstr "Brightmaps"
 
 msgid "PICKER_WIDESCREEN"
-msgstr ""
+msgstr "Tela larga"
 
 msgid "PICKER_ADDPARM"
 msgstr "Parâmetros adicionais:"
@@ -1766,7 +1752,7 @@ msgid "MISCMNU_DISCORDRPC"
 msgstr "Status de atividade no Discord"
 
 msgid "JOYMNU_TURNSPEED"
-msgstr ""
+msgstr "Velocidade de giro"
 
 msgid "JOYMNU_LOOKSPEED"
 msgstr "Sensibilidade do o­lhar­­­­­"
@@ -1811,3 +1797,118 @@ msgstr "Quantidade de Mensagens"
 
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "Combinar mensagens repetidas"
+
+msgid "MSGMNU_MESSAGEFADE"
+msgstr "Duração de fadeout das mensagens"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Tamanho do ambiente"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Difusão do ambiente"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Sala"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Sala (alta frequência)"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Sala (baixa frequência)"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Tempo de decaimento"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Taxa de decaimento (alta freq.)"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Taxa de decaimento (baixa freq.)"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Reflexos"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Atraso de reflexos"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Deslocamento X de reflexos"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Deslocamento Y de reflexos"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Deslocamento Z de reflexos"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Reverberação"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Atraso de reverberação"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Deslocamento X de reverberação"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Deslocamento Y de reverberação"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Deslocamento Z de reverberação"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Tempo de eco"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Profundidade de eco"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Tempo de modulação"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Profundidade de modulação"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Absorção de ar de alta freq."
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "Referência de alta freq."
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "Referência de baixa freq."
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Fator de roll-off de sala"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Difusão"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Densidade"

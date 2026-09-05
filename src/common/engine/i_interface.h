@@ -95,7 +95,7 @@ struct FStartupSelectionInfo
 	int DefaultIWAD = 0;
 	FString DefaultArgs = {};
 	bool bSaveArgs = true;
-	bool isNewRelease = true;
+	int displayRelease = 1;
 
 	// Settings
 	int DefaultStartFlags = 0;
@@ -103,7 +103,11 @@ struct FStartupSelectionInfo
 	FString DefaultLanguage = "auto";
 	int DefaultBackend = 1;
 	bool DefaultFullscreen = true;
+	bool DefaultVsync = false;
 	int DefaultFileLoadBehaviour = 0;
+	bool DefaultDynLights = true;
+	bool DefaultShadowmaps = false;
+	int DefaultPreferredTheme = 0;
 
 	// Net game info
 	int DefaultNetIWAD = 0;

@@ -46,13 +46,18 @@ private:
 	TextLabel* GeneralLabel = nullptr;
 	TextLabel* ExtrasLabel = nullptr;
 	TextLabel* LoadLabel = nullptr;
+	TextLabel* ThemeLabel = nullptr;
 	CheckboxLabel* FullscreenCheckbox = nullptr;
+	CheckboxLabel* VsyncCheckbox = nullptr;
 	CheckboxLabel* DisableAutoloadCheckbox = nullptr;
 	CheckboxLabel* DontAskAgainCheckbox = nullptr;
 	CheckboxLabel* LightsCheckbox = nullptr;
 	CheckboxLabel* BrightmapsCheckbox = nullptr;
 	CheckboxLabel* WidescreenCheckbox = nullptr;
 	CheckboxLabel* SupportWadsCheckbox = nullptr;
+	CheckboxLabel* DynLightsCheckbox = nullptr;
+	CheckboxLabel* ShadowmapCheckbox = nullptr;
+	Dropdown* ThemeDropdown = nullptr;
 #ifdef RENDER_BACKENDS
 	TextLabel* BackendLabel = nullptr;
 	CheckboxLabel* VulkanCheckbox = nullptr;

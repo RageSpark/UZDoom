@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-12 16:58+0000\n"
-"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Latin <https://hosted.weblate.org/projects/uzdoom/common/la/>\n"
 "Language: la\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Preme Y vel N."
@@ -40,22 +40,14 @@ msgstr ""
 
 msgid "QLPROMPT"
 msgstr ""
-"Visne ludum nomine\n"
+"Visne ludum nomine \n"
 "\n"
-"'%s'\n"
-"\n"
-"cito onerare?\n"
+"'%s' celeriter onerare?\n"
 "\n"
 "Preme Y vel N."
 
 msgid "TXT_X_CHEATS"
 msgstr "%s defraudat"
-
-msgid "MSGOFF"
-msgstr "Mandata: OFF"
-
-msgid "MSGON"
-msgstr "Mandata: ON"
 
 msgid "TXT_SAY"
 msgstr "Dic:"
@@ -277,7 +269,7 @@ msgid "CNTRLMNU_SLOT5"
 msgstr "Telum 5"
 
 msgid "CNTRLMNU_SLOT6"
-msgstr "Telum VI \""
+msgstr "Telum VI"
 
 msgid "CNTRLMNU_SLOT7"
 msgstr "Telum 7"
@@ -385,7 +377,7 @@ msgid "CNTRLMNU_QUICKLOAD"
 msgstr "Onerare cito"
 
 msgid "CNTRLMNU_EXIT_TO_MAIN"
-msgstr "Exitus AD Tabula Principalis"
+msgstr "Exitus Ad Tabula Principalis"
 
 msgid "CNTRLMNU_TOGGLE_MESSAGES"
 msgstr "Nuntios alterna"
@@ -706,7 +698,7 @@ msgid "OPTVAL_1024SAMPLES"
 msgstr "1024 exemplaria"
 
 msgid "OPTVAL_2048SAMPLES"
-msgstr "mMXLVIII exempla"
+msgstr "2048 exempla"
 
 msgid "OPTVAL_4096SAMPLES"
 msgstr "4096 exemplaria"
@@ -981,7 +973,7 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1010,9 +1002,6 @@ msgstr "MAME YM2608"
 
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
-
-msgid "OPTVAL_NUKEDOPL3174"
-msgstr "Nudum OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr "Nuked OPN2 (YM3438)"
@@ -1452,34 +1441,34 @@ msgstr "Ambitum edita"
 msgid "REVMNU_NEW"
 msgstr "Novus ambitus"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Scala reflexionum"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Reflexiones mora Scale"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Labe Tempus Scale"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Labe HF Limit"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Scala reverberationis"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Ascendite mora Reverb"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Tempus Echo Scale"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Scala temporis modulationis"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Ex"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Nomen"
 
 msgid "REVMNU_ID_1"
@@ -1488,16 +1477,16 @@ msgstr "ID # I \""
 msgid "REVMNU_ID_2"
 msgstr "ID #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Crea"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Serva…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Nomen fasciculi"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Environments servare"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1595,9 +1584,6 @@ msgstr "Generale"
 
 msgid "PICKER_EXTRA"
 msgstr "Graphica addita"
-
-msgid "PICKER_FULLSCREEN"
-msgstr "Plenum tegumentum"
 
 msgid "PICKER_NOAUTOLOAD"
 msgstr "Inactivare autoload"

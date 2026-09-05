@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-07 15:11+0000\n"
-"Last-Translator: H Tamás <hovanszki@gmail.com>\n"
+"PO-Revision-Date: 2026-08-14 23:05+0000\n"
+"Last-Translator: MadRadical <milan.gaal.231@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/common/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "PRESSYN"
 msgstr "Nyomj Y-t vagy N-t."
@@ -49,12 +49,6 @@ msgstr ""
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "%s csal"
-
-msgid "MSGOFF"
-msgstr "Üzenetek: KI"
-
-msgid "MSGON"
-msgstr "Üzenetek: BE"
 
 msgid "TXT_SAY"
 msgstr "Üzenet:"
@@ -263,7 +257,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "1. fegyver"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "2. fegyver"
 
@@ -979,7 +972,7 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1008,9 +1001,6 @@ msgstr "MAME YM2608"
 
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
-
-msgid "OPTVAL_NUKEDOPL3174"
-msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr "Nuked OPN2 (YM3438)"
@@ -1454,34 +1444,34 @@ msgstr "Környezet Szerkesztése"
 msgid "REVMNU_NEW"
 msgstr "Új Környezet"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Tükröződési Arány"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Tükröződési Késleltetési Arány"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Decay Idő Arány"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Decay HF Limitje"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Reverb Arány"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Reverb Késleltetési Arány"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Visszhang Idő Arány"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Modulációs Idő Arány"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Minta"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Név"
 
 msgid "REVMNU_ID_1"
@@ -1490,16 +1480,16 @@ msgstr "AZON #1"
 msgid "REVMNU_ID_2"
 msgstr "AZON #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Készítés"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Mentés…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Fájlnév"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Mentendő Környezetek"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1597,9 +1587,6 @@ msgstr "Általános"
 
 msgid "PICKER_EXTRA"
 msgstr "Extra grafika"
-
-msgid "PICKER_FULLSCREEN"
-msgstr "Teljes képernyő"
 
 msgid "PICKER_NOAUTOLOAD"
 msgstr "Automatikus betöltés kikapcsolása"
@@ -1789,3 +1776,118 @@ msgstr "%s verzió %s, kiadva %s"
 
 msgid "NOTES_FAIL"
 msgstr "Kiadási jegyzetek feldolgozása nem sikerült"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Környezet méret"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Környezet diffúzió"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Szoba"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Szoba HF"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Szoba LF"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Tükröződések"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Visszaverődés késleltetése"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Visszhang"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Visszhang késleltetése"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Moduláció Idő"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Moduláció Mélység"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Diffúzió"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Sűrűség"
+
+msgid "MSGMNU_MESSAGEFADE"
+msgstr "Üzenet eltűnésének ideje"

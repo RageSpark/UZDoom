@@ -1,6 +1,8 @@
 #pragma once
 
 #include <unordered_map>
+#include <atomic>
+#include <mutex>
 #include <zwidget/window/window.h>
 #include <zwidget/window/sdl2nativehandle.h>
 #include <SDL2/SDL.h>
@@ -108,6 +110,7 @@ public:
 
 	bool CursorLocked = false;
 	bool isFullscreen = false;
+	bool updating = false;
 
 	static bool ExitRunLoop;
 	static Uint32 PaintEventNumber;
@@ -115,6 +118,6 @@ public:
 
 	static std::unordered_map<void *, void *> TimerHandles;
 	static std::unordered_map<void *, std::function<void()>> Timers;
-	static unsigned long TimerIDs;
-	static Uint32 TimerEventNumber;
+	static std::atomic<uintptr_t> TimerIDs;
+	static std::mutex TimerMutex;
 };

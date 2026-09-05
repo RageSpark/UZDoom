@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-07 17:11+0000\n"
+"PO-Revision-Date: 2026-08-25 08:51+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/id/>\n"
 "Language: id\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Tekan sembarang tombol."
@@ -282,35 +282,11 @@ msgstr "Pergantian Musik"
 msgid "STSTR_NOMUS"
 msgstr "Pilihan Tidak Valid"
 
-msgid "STSTR_DQDON"
-msgstr "Mode Tanpa Derajat: AKTIF"
-
-msgid "STSTR_DQDOFF"
-msgstr "Mode Tanpa Derajat: NONAKTIF"
-
-msgid "STSTR_DQD2ON"
-msgstr "Mode Tanpa Derajat Tertinggi: AKTIF"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Mode Tanpa Derajat Tertinggi: NONAKTIF"
-
 msgid "STSTR_KFAADDED"
 msgstr "Amunisi Sangat Menyenangkan Ditambahkan"
 
 msgid "STSTR_FAADDED"
 msgstr "Amunisi (tanpa kunci) Ditambahkan"
-
-msgid "STSTR_NCON"
-msgstr "Mode Tanpa Kliping: AKTIF"
-
-msgid "STSTR_NCOFF"
-msgstr "Mode Tanpa Kliping: NONAKTIF"
-
-msgid "STSTR_NC2ON"
-msgstr "Mode Tanpa Kliping 3D: AKTIF"
-
-msgid "STSTR_NC2OFF"
-msgstr "Mode Tanpa Kliping 3D: NONAKTIF"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -332,47 +308,17 @@ msgstr "… tidak buruk - GM"
 msgid "STSTR_CLEV"
 msgstr "Mengganti Level…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Mode Buddha: AKTIF"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Mode Buddha: NONAKTIF"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Mode Buddha Tertinggi: AKTIF"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Mode Buddha Tertinggi: NONAKTIF"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Daya: AKTIF"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Daya: NONAKTIF"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Kesehatan penuh"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Semua kunci"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Debug suara: AKTIF"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debug suara: NONAKTIF"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Mencoba curang, hah? Sekarang kamu mati!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Penipu—kamu tidak layak mendapat senjata"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: AKTIF"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: NONAKTIF"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Kamu mendapatkannya"
@@ -383,12 +329,6 @@ msgstr "Kamu mendapat Sentuhan Midas, sayang"
 msgid "TXT_GOTSTUFF"
 msgstr "Kamu mendapat barangnya!"
 
-msgid "TXT_FREEZEON"
-msgstr "Mode Beku: AKTIF"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Mode Beku: NONAKTIF"
-
 msgid "TXT_STRANGE"
 msgstr "Kamu merasa aneh…"
 
@@ -398,35 +338,17 @@ msgstr "Kamu merasa semakin aneh."
 msgid "TXT_NOTSTRANGE"
 msgstr "Kamu merasa seperti dirimu sendiri lagi."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Sepatu timbal: AKTIF"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Sepatu timbal: NONAKTIF"
-
 msgid "TXT_LIGHTER"
 msgstr "Kamu merasa lebih ringan"
 
 msgid "TXT_GRAVITY"
 msgstr "Gravitasi menarikmu ke bawah"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Tanpa Target: AKTIF"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Tanpa Target: NONAKTIF"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Gemetarlah ketakutan!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Tidak ada lagi Zirah Ogre"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Kamera pengikut: AKTIF"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Kamera pengikut: NONAKTIF"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 musuh terbunuh"
@@ -441,7 +363,8 @@ msgid "TXT_MONSTERS_KILLED"
 msgstr "%d monster terbunuh"
 
 msgid "TXT_NO_RESURRECT"
-msgstr "Tidak dapat membangkitkan. Pemain tidak lagi terhubung dengan tubuhnya."
+msgstr ""
+"Tidak dapat membangkitkan. Pemain tidak lagi terhubung dengan tubuhnya."
 
 msgid "TXT_ALL_ARTIFACTS"
 msgstr "Semua Artefak!"
@@ -451,24 +374,6 @@ msgstr "Apa yang ingin kamu bunuh di luar game?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Properti pemain yang dibekukan: NONAKTIF"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Mode Ikuti: NONAKTIF"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Mode Ikuti: AKTIF"
-
-msgid "AMSTR_GRIDON"
-msgstr "Grid: AKTIF"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Grid: NONAKTIF"
-
-msgid "AMSTR_TEXON"
-msgstr "Mode Tekstur: AKTIF"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Mode Tekstur: NONAKTIF"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Titik Ditandai"
@@ -2780,6 +2685,7 @@ msgstr "Kerja Bagus!"
 msgid "CE4TEXT"
 msgstr "Luar Biasa"
 
+#, fuzzy
 msgid "CLOADNET"
 msgstr ""
 "Kamu tidak bisa memuat saat dalam petualangan jaringan!\n"
@@ -2846,14 +2752,6 @@ msgstr ""
 "Apakah kamu yakin ingin mengakhiri petualangan?\n"
 "\n"
 "Tekan Y atau N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Mode Kebal: AKTIF"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Mode Kebal: NONAKTIF"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -4339,8 +4237,9 @@ msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Urutkan daftar gambar berdasarkan tekstur"
 
 msgid "GLLIGHTMNU_TITLE"
-msgstr "Cahaya Dinamis"
+msgstr "Lampu Dinamis"
 
+#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Cahaya Dinamis (Perangkat Keras)"
 
@@ -4522,9 +4421,6 @@ msgstr "Filter linear saat memperbesar"
 msgid "TCMNU_MIPMAP"
 msgstr "Gunakan tekstur bermipmaps"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Cahaya dinamis (Perangkat Lunak)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Selalu tampilkan kunci"
 
@@ -4560,10 +4456,14 @@ msgid "TXT_OTHERENGINESG"
 msgstr "Simpanan '%s' berasal dari mesin berbasis ZDoom lain:"
 
 msgid "TXT_TOOOLDSG"
-msgstr "Simpanan '%s' berasal dari versi lama (%d). Versi tertua yang didukung adalah %e."
+msgstr ""
+"Simpanan '%s' berasal dari versi lama (%d). Versi tertua yang didukung "
+"adalah %e."
 
 msgid "TXT_TOONEWSG"
-msgstr "Simpanan '%s' berasal dari versi lebih baru (%d). Versi tertinggi yang didukung adalah %e."
+msgstr ""
+"Simpanan '%s' berasal dari versi lebih baru (%d). Versi tertinggi yang "
+"didukung adalah %e."
 
 msgid "TXT_NOMAPSG"
 msgstr "Simpanan '%s' tidak memiliki peta saat ini."
@@ -5195,13 +5095,20 @@ msgid "DSPLYMNU_IMAGEADJUST_TOP3"
 msgstr "Harap nonaktifkan sebelum melakukan penyesuaian."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
-msgstr "Mengkompensasi keterbatasan monitor. Sesuaikan hingga balok abu-abu vertikal memudar. Jangan gunakan ini untuk membuat game lebih terang, hanya untuk memastikan gambar terkalibrasi untuk pengaturan kamu."
+msgstr ""
+"Mengkompensasi keterbatasan monitor. Sesuaikan hingga balok abu-abu vertikal"
+" memudar. Jangan gunakan ini untuk membuat game lebih terang, hanya untuk "
+"memastikan gambar terkalibrasi untuk pengaturan kamu."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Kompensasi titik hitam"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
-msgstr "Mengkompensasi monitor yang gagal menampilkan piksel gelap dengan benar. Sesuaikan hingga balok putih diagonal memudar. Jangan gunakan ini untuk membuat game lebih terang, hanya untuk memastikan gambar terkalibrasi untuk pengaturan kamu."
+msgstr ""
+"Mengkompensasi monitor yang gagal menampilkan piksel gelap dengan benar. "
+"Sesuaikan hingga balok putih diagonal memudar. Jangan gunakan ini untuk "
+"membuat game lebih terang, hanya untuk memastikan gambar terkalibrasi untuk "
+"pengaturan kamu."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "Mengatur ulang semua opsi dalam menu ini ke pengaturan bawaan."
@@ -5216,13 +5123,19 @@ msgid "DSPLYMNU_IMAGEADJUST"
 msgstr "Kalibrasi Gambar"
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
-msgstr "Menerapkan penyesuaian kecerahan linear. Sesuaikan sesuai selera, atau agar bisa melihat dalam gelap."
+msgstr ""
+"Menerapkan penyesuaian kecerahan linear. Sesuaikan sesuai selera, atau agar "
+"bisa melihat dalam gelap."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
-msgstr "Menyesuaikan perbedaan yang dirasakan antara warna yang mirip. Mengontrol seberapa tajam/pudar tampilan gambar. Sesuaikan sesuai selera."
+msgstr ""
+"Menyesuaikan perbedaan yang dirasakan antara warna yang mirip. Mengontrol "
+"seberapa tajam/pudar tampilan gambar. Sesuaikan sesuai selera."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
-msgstr "Menyesuaikan intensitas warna, membuat gambar terlihat lebih hidup atau redup. Sesuaikan sesuai selera."
+msgstr ""
+"Menyesuaikan intensitas warna, membuat gambar terlihat lebih hidup atau "
+"redup. Sesuaikan sesuai selera."
 
 msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
 msgstr "Transparan"
@@ -5262,10 +5175,14 @@ msgid "ACCMNU_LIGHT_EXTRA"
 msgstr "Pencahayaan Ekstra"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
-msgstr "Mengontrol jarak radius cahaya di sekitar pemain dalam satuan peta. Nilai yang lebih besar membuat pemandangan lebih terang."
+msgstr ""
+"Mengontrol jarak radius cahaya di sekitar pemain dalam satuan peta. Nilai "
+"yang lebih besar membuat pemandangan lebih terang."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
-msgstr "Jumlah pencahayaan sektor yang ditambahkan di atas tingkat cahaya sektor yang ada, sambil mempertahankan mode pencahayaan yang ada."
+msgstr ""
+"Jumlah pencahayaan sektor yang ditambahkan di atas tingkat cahaya sektor "
+"yang ada, sambil mempertahankan mode pencahayaan yang ada."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Radius Cahaya Pemain"
@@ -5382,4 +5299,194 @@ msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
 msgstr "Ambang Klik Ganda"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
-msgstr "Waktu antara penekanan tombol berturut-turut untuk memicu peristiwa klik ganda"
+msgstr ""
+"Waktu antara penekanan tombol berturut-turut untuk memicu peristiwa klik "
+"ganda"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Mode Tanpa Derajat: {AKTIF|NONAKTIF}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Mode Tanpa Derajat Tertinggi: {AKTIF|NONAKTIF}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Mode Tanpa Kliping: {AKTIF|NONAKTIF}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Mode Tanpa Kliping 3D: {AKTIF|NONAKTIF}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Mode Buddha: {AKTIF|NONAKTIF}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Mode Buddha Tertinggi: {AKTIF|NONAKTIF}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Daya: {AKTIF|NONAKTIF}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Debug suara: {AKTIF|NONAKTIF}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {AKTIF|NONAKTIF}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Mode Beku: {AKTIF|NONAKTIF}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Sepatu timbal: {AKTIF|NONAKTIF}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Tanpa Target: {AKTIF|NONAKTIF}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Kamera pengikut: {AKTIF|NONAKTIF}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Mode Ikuti: {AKTIF|NONAKTIF}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Grid: {AKTIF|NONAKTIF}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Mode Tekstur: {AKTIF|NONAKTIF}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Mode Kebal: {AKTIF|NONAKTIF}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Pesan: {AKTIF|MATI}"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Otomatis (ZDoom Diutamakan)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Otomatis (Vanilla Diutamakan)"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Periksa Pembaruan"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Minta untuk menginstal"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Pengaturan Pembaruan"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Periksa setiap:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Pembaruan Baru Tersedia"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Lewati Pembaruan"
+
+msgid "UPDATER_TITLE"
+msgstr "Pemeriksa Pembaruan"
+
+msgid "UPDATER_DISABLE"
+msgstr "Nonaktifkan Pemeriksa Pembaruan"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Pemeriksaan Pembaruan Gagal"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Pembaruan Gagal"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Ya, dan minta untuk menginstal pembaruan"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Tutup Pembaruan?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Apakah Anda ingin secara otomatis memeriksa pembaruan?\n"
+"(ini dapat diubah nanti di tab opsi)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Seberapa sering Anda ingin memeriksa pembaruan?\n"
+"(ini dapat diubah nanti di tab opsi)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Gagal membuka file zip"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Gagal mengekstrak zip, kesalahan: '{}' saat menulis file '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Memperbarui..."
+
+msgid "UPDATER_STARTING"
+msgstr "Memulai Unduhan..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Pembaruan berhasil, peluncur akan dimulai ulang sekarang."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Sudah Terbaru!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Pembaruan dibatalkan"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "JSON Pembaruan Tidak Valid"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' bukan direktori"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Nonaktifkan"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Beri Tahu"
+
+msgid "OPTVAL_DAILY"
+msgstr "Harian"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Mingguan"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Bulanan"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Mengunduh"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Eksperimental"
+
+msgid "TXT_UPDATE"
+msgstr "Perbarui"
+
+msgid "TXT_UPDATED"
+msgstr "Diperbarui"
+
+msgid "TXT_CANCELLED"
+msgstr "Dibatalkan"
+
+msgid "TXT_BACK"
+msgstr "Kembali"
+
+msgid "TXT_DISMISS"
+msgstr "Tutup"
+
+msgid "TXT_SKIP"
+msgstr "Lewati"
+
+msgid "TXT_CONFIRM"
+msgstr "Konfirmasi"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "Transfer khusus perubahan lantai BOOM meneruskan rahasia."
+
+msgid "PICKER_THEME"
+msgstr "Tema"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Terang"

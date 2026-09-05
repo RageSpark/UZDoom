@@ -256,12 +256,21 @@ int VMScriptFunction::PCToLine(const VMOP *pc)
 {
 	int PCIndex = int(pc - Code);
 	if (LineInfoCount == 1) return LineInfo[0].LineNumber;
+	unsigned MaxIdx = 0;
 	for (unsigned i = 1; i < LineInfoCount; i++)
 	{
 		if (LineInfo[i].InstructionIndex > PCIndex)
 		{
 			return LineInfo[i - 1].LineNumber;
 		}
+		if (LineInfo[i].InstructionIndex > LineInfo[MaxIdx].InstructionIndex)
+		{
+			MaxIdx = i;
+		}
+	}
+	if (PCIndex < CodeSize)
+	{
+		return LineInfo[MaxIdx].LineNumber;
 	}
 	return -1;
 }
@@ -622,7 +631,15 @@ template<> void VMCheckParam<DObject*>(VMFunction* func, int index)
 		I_FatalError("%s argument %d is not an object", func->PrintableName, index);
 }
 
+template<> void VMCheckParam<void*>(VMFunction* func, int index)
+{
+}
+
 template<> void VMCheckReturn<void>(VMFunction* func, int index)
+{
+}
+
+template<> void VMCheckReturn<void*>(VMFunction* func, int index)
 {
 }
 

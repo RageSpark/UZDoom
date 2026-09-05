@@ -610,7 +610,7 @@ void D_Render(std::function<void()> action, bool interpolate)
 	for (auto Level : AllLevels())
 	{
 		// Check for the presence of dynamic lights at the start of the frame once.
-		if ((gl_lights && vid_rendermode == 4) || (r_dynlights && vid_rendermode != 4) || Level->LightProbes.Size() > 0)
+		if (r_dynlights || Level->LightProbes.Size() > 0)
 		{
 			Level->HasDynamicLights = Level->lights || Level->LightProbes.Size() > 0;
 		}
@@ -770,8 +770,8 @@ CVAR (Flag, sv_nocountendmonst,		dmflags2, DF2_NOCOUNTENDMONST);
 CVAR (Flag, sv_respawnsuper,		dmflags2, DF2_RESPAWN_SUPER);
 CVAR (Flag, sv_nothingspawn,		dmflags2, DF2_NO_COOP_THING_SPAWN);
 CVAR (Flag, sv_alwaysspawnmulti,	dmflags2, DF2_ALWAYS_SPAWN_MULTI);
-CVAR (Flag, sv_novertspread,		dmflags2, DF2_NOVERTSPREAD);
 CVAR (Flag, sv_noextraammo,			dmflags2, DF2_NO_EXTRA_AMMO);
+DEPR_CVAR(Flag, sv_novertspread,	dmflags2, "Engine feature removed in favour of modding");
 
 //==========================================================================
 //
@@ -1353,7 +1353,7 @@ void D_Display ()
 				}
 				if (paused && multiplayer)
 				{
-					FFont *font = generic_ui ? NewSmallFont : SmallFont;
+					FFont *font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 					FString plrString = GStrings.GetString("TXT_BY");
 					plrString.Substitute("%s", players[paused - 1].userinfo.GetName());
 					TArray<FBrokenLines> txtbyLines = V_BreakLines(font, maxWidth, plrString);
@@ -1542,7 +1542,7 @@ void D_PageDrawer (void)
 	}
 	if (Subtitle != nullptr)
 	{
-		FFont* font = generic_ui ? NewSmallFont : SmallFont;
+		FFont* font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 		DrawFullscreenSubtitle(font, Subtitle);
 	}
 	if (Advisory.isValid())
@@ -3145,6 +3145,7 @@ void System_LanguageChanged(const char* lang)
 		// does this even make sense on secondary levels...?
 		if (Level->info != nullptr) Level->LevelName = Level->info->LookupLevelName();
 	}
+
 	I_UpdateWindowTitle();
 }
 
@@ -4124,12 +4125,12 @@ static int D_DoomMain_Internal (void)
 		std::vector<FileSys::ResourceName> allwads;
 
 		const FIWADInfo *iwad_info = iwad_man->FindIWAD(allwads, iwad.GetChars(), basewad.GetChars(), optionalwad.GetChars());
+		if (!iwad_info) return 0;	// user exited the selection popup via cancel button.
 
 		GetCmdLineFiles(pwads, false); // [RL0] Update with files passed on the launcher extra args
 		// For now these need to remain verifiable over the network.
 		GetCmdLineFiles(pwads, true);
 
-		if (!iwad_info) return 0;	// user exited the selection popup via cancel button.
 		if ((iwad_info->flags & GI_SHAREWARE) && pwads.size() > 0)
 		{
 			I_FatalError ("You cannot -file or -optfile with the shareware version. Register!");

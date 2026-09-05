@@ -253,7 +253,7 @@ void CT_Drawer (void)
 {
 	auto &vp = r_viewpoint;
 	auto drawer = twod;
-	FFont *displayfont = NewConsoleFont;
+	FFont *displayfont = FFont::GetConsoleFont(NewConsoleFont);
 
 	HU_DrawScores(vp.TicFrac);
 
@@ -290,6 +290,11 @@ void CT_Drawer (void)
 
 		promptwidth = displayfont->StringWidth (prompt) * scalex;
 		x = displayfont->GetCharWidth (displayfont->GetCursor()) * scalex * 2 + promptwidth;
+
+		if (displayfont->IsValidDynamicFont())
+		{
+			y -= displayfont->GetHeight();
+		}
 
 		FString printstr = ChatQueue;
 		// figure out if the text is wider than the screen
@@ -534,9 +539,14 @@ static bool DoSubstitution (FString &out, const char *in)
 	return true;
 }
 
+bool CanChat()
+{
+	return gamestate == GS_LEVEL && !demoplayback && menuactive == MENU_Off;
+}
+
 CCMD (messagemode)
 {
-	if (menuactive != MENU_Off)
+	if (!CanChat())
 		return;
 
 	const uint64_t time = I_msTime();
@@ -580,6 +590,12 @@ CCMD (say)
 		return;
 	}
 
+	if (!CanChat())
+	{
+		Printf("Game is not in a valid state to send messages.\n");
+		return;
+	}
+
 	const uint64_t time = I_msTime();
 	if (ChatCoolDown > time)
 	{
@@ -612,7 +628,7 @@ CCMD (say)
 
 CCMD (messagemode2)
 {
-	if (menuactive != MENU_Off)
+	if (!CanChat())
 		return;
 
 	const uint64_t time = I_msTime();
@@ -653,6 +669,12 @@ CCMD (say_team)
 	if (argv.argc() == 1)
 	{
 		Printf ("Usage: say_team <message>\n");
+		return;
+	}
+
+	if (!CanChat())
+	{
+		Printf("Game is not in a valid state to send messages.\n");
 		return;
 	}
 

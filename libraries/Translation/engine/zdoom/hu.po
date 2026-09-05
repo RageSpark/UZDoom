@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-13 16:30+0000\n"
+"PO-Revision-Date: 2026-08-14 22:48+0000\n"
 "Last-Translator: MadRadical <milan.gaal.231@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/hu/>\n"
 "Language: hu\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Nyomjon meg egy gombot."
@@ -282,35 +282,11 @@ msgstr "Zene Váltás"
 msgid "STSTR_NOMUS"
 msgstr "Lehetetlen Kiválasztás"
 
-msgid "STSTR_DQDON"
-msgstr "Sérthetetlenség Mód: BE"
-
-msgid "STSTR_DQDOFF"
-msgstr "Sérthetetlenség Mód: KI"
-
-msgid "STSTR_DQD2ON"
-msgstr "Tökéletes Sérthetetlenség Mód: BE"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Tökéletes Sérthetetlenség Mód: KI"
-
 msgid "STSTR_KFAADDED"
 msgstr "Összes Lőszer Megadva"
 
 msgid "STSTR_FAADDED"
 msgstr "Lőszer (nincsenek kulcsok) Megadva"
-
-msgid "STSTR_NCON"
-msgstr "Falonátmenés Mód: BE"
-
-msgid "STSTR_NCOFF"
-msgstr "Falonátmenés Mód: KI"
-
-msgid "STSTR_NC2ON"
-msgstr "3D Falonátmenési Mód: BE"
-
-msgid "STSTR_NC2OFF"
-msgstr "3D Falonátmenési Mód: KI"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -320,7 +296,8 @@ msgstr "3D Falonátmenési Mód: KI"
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
 msgstr ""
-"Sérthetetlenség (V), berzerker mód (S), láthatatlanság (i), védőRuha, térkép (A), vagy éjjelLátó sisak"
+"Sérthetetlenség (V), berzerker mód (S), láthatatlanság (i), védőRuha, térkép"
+" (A), vagy éjjelLátó sisak"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Képesség hozzáadva"
@@ -333,47 +310,17 @@ msgstr "… nem annyira gáz - GM"
 msgid "STSTR_CLEV"
 msgstr "Pályaváltás…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Buddha Mód: BE"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Buddha Mód: KI"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Tökéletes Buddha Mód: BE"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Tökéletes Buddha Mód: KI"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Energia: BE"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Energia: KI"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Teljes életerő"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Összes kulcs"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Hang debug: BE"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Hang debug: KI"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Csalni akarsz, mi? Most meghalsz!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Csaló—nem érdemelsz fegyvert"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Számláló: BE"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Számláló: KI"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Megkaptad"
@@ -384,12 +331,6 @@ msgstr "Minden arannyá válik amit megérintesz, öreg"
 msgid "TXT_GOTSTUFF"
 msgstr "Megkaptad a cuccot!"
 
-msgid "TXT_FREEZEON"
-msgstr "Fagyasztás: BE"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Fagyasztás: KI"
-
 msgid "TXT_STRANGE"
 msgstr "Furán érzed magad…"
 
@@ -399,35 +340,17 @@ msgstr "Még furábban érzed magad."
 msgid "TXT_NOTSTRANGE"
 msgstr "Magadhoz tértél."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Ólomcsizma: BE"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Ólomcsizma: KI"
-
 msgid "TXT_LIGHTER"
 msgstr "Könnyűnek érzed magad"
 
 msgid "TXT_GRAVITY"
 msgstr "A gravitáció lehúz téged"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Nem támadnak a szörnyek: BE"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Nem támadnak a szörnyek: KI"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Reszkess, halandó!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Ogre pajzs lejárt"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Követő kamera: BE"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Követő kamera: KI"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 rosszfiú kinyírva"
@@ -452,24 +375,6 @@ msgstr "Mit tudnál megölni játékon kívül?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Fagyasztott játékos tulajdonságai: KI"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Követés mód: KI"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Követés mód: BE"
-
-msgid "AMSTR_GRIDON"
-msgstr "Rács: BE"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Rács: KI"
-
-msgid "AMSTR_TEXON"
-msgstr "Textúrák mód: BE"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Textúrák mód: KI"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Megjelölt hely"
@@ -2785,7 +2690,7 @@ msgid "CLOADNET"
 msgstr ""
 "Nem tudsz mentést betölteni netes küldetés közben!\n"
 "\n"
-"Nyomjon meg egy gombot."
+"Nyomj meg egy gombot."
 
 msgctxt "chex"
 msgid "QSPROMPT"
@@ -2847,14 +2752,6 @@ msgstr ""
 "Biztosan be akarod fejezni a küldetést?\n"
 "\n"
 "Nyomj Y-t vagy N-t."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Sérthetetlen mód: BE"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Sérthetetlen mód: KI"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -4343,7 +4240,7 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr "Dinamikus Fények"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Dinamikus Fények (hardveres)"
+msgstr "Dinamikus Fények"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "A fény hatással van a sprite-okra"
@@ -4523,9 +4420,6 @@ msgstr "Lineáris filterezés felméretezésnél"
 msgid "TCMNU_MIPMAP"
 msgstr "Mipmap textúrák"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Dinamikus fények (szoftveres)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Kulcsokat mindig mutat"
 
@@ -4562,16 +4456,18 @@ msgstr "A '%s' mentés egy másik ZDoom motorhoz való:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"A '%s' mentés egy túl régi verzióhoz való: %d (%e a legfrissebb támogatott verzió)."
+"A '%s' mentés egy túl régi verzióhoz való: %d (%e a legfrissebb támogatott "
+"verzió)."
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"A '%s' mentés egy túl új verzióhoz való: %d (%e a legkorábbi támogatott verzió)."
+"A '%s' mentés egy túl új verzióhoz való: %d (%e a legkorábbi támogatott "
+"verzió)."
 
 msgid "TXT_NOMAPSG"
 msgstr "A '%s' mentés hiányolja a jelenlegi pályát."
@@ -5269,11 +5165,13 @@ msgstr "Játékos körüli fény sugara"
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr ""
-"Az összes lehetőséget visszaállítja az alapértelmezett értékekere ebben a menüben."
+"Az összes lehetőséget visszaállítja az alapértelmezett értékekere ebben a "
+"menüben."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"A játékos körüli fény sugarát határozza meg, map unitban. A magasabb érték világosabbá teszi a helyet."
+"A játékos körüli fény sugarát határozza meg, map unitban. A magasabb érték "
+"világosabbá teszi a helyet."
 
 msgid "DSPLYMNU_ROCKETEXPSTYLE"
 msgstr "Robbanások megjelenítési módja"
@@ -5289,7 +5187,8 @@ msgstr "Feketepontos kiegyenlítés"
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Lineáris fényesség igazítása. Módosítsa kedve szerint vagy hogy jobban láss a sötétben."
+"Lineáris fényesség igazítása. Módosítsa kedve szerint vagy hogy jobban láss "
+"a sötétben."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Igazítson rajta amég teljesen szürke színűnek nem tűnik."
@@ -5299,23 +5198,31 @@ msgstr "Érintéses visszajelzési lehetőségek"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Az extra világítás mértéke, ami a szektorok alapértelmezett fényerejéhez hozzáadódik, közben megőrizve azt."
+"Az extra világítás mértéke, ami a szektorok alapértelmezett fényerejéhez "
+"hozzáadódik, közben megőrizve azt."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"A monitorja limitációit kompenzálja. Igazítsa, amég a szürke blokkok el nem tűnnek. Ne használja a játék világosabbá tételére, csakis arra, hogy megbizonyosodjon, hogy a kép megfelelően fog megjelenni."
+"A monitorja limitációit kompenzálja. Igazítsa, amég a szürke blokkok el nem "
+"tűnnek. Ne használja a játék világosabbá tételére, csakis arra, hogy "
+"megbizonyosodjon, hogy a kép megfelelően fog megjelenni."
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Olyan monitorok számára kompenzációt nyújt, amelyek nem képesek a fekete pixeleket megjeleníteni. Igazítsa, amég az átlós fehér blokkok el nem tűnnik. Ne használja a játék világosabbá tételére, csakis arra, hogy megbizonyosodjon, hogy a kép megfelelően fog megjelenni."
+"Olyan monitorok számára kompenzációt nyújt, amelyek nem képesek a fekete "
+"pixeleket megjeleníteni. Igazítsa, amég az átlós fehér blokkok el nem "
+"tűnnik. Ne használja a játék világosabbá tételére, csakis arra, hogy "
+"megbizonyosodjon, hogy a kép megfelelően fog megjelenni."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"A hasonló színek közötti érzékelhető különbséget igazítja. Módosítja, hogy milyen élesnek/elmosódottnak látszódik a kép. Módosítsa kedve szerint."
+"A hasonló színek közötti érzékelhető különbséget igazítja. Módosítja, hogy "
+"milyen élesnek/elmosódottnak látszódik a kép. Módosítsa kedve szerint."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"A szynk erősségét igazítja, ezzel a képet élénkebbé vagy visszafogottabbá teszi. Módosítsa kedve szerint."
+"A szynk erősségét igazítja, ezzel a képet élénkebbé vagy visszafogottabbá "
+"teszi. Módosítsa kedve szerint."
 
 msgid "OPTVAL_SBSLETTERBOX"
 msgstr "Egymás melletti, letterbox-olt"
@@ -5359,7 +5266,6 @@ msgstr "Dinamikus célkereszt színek"
 msgid "HUDMNU_CROSSHAIRYOFFSET"
 msgstr "Célkereszt függőleges eltolása"
 
-#, fuzzy
 msgid "MAPCOLORMNU_SECTORFILLALPHA"
 msgstr "Alfa Kitöltés"
 
@@ -5369,16 +5275,205 @@ msgstr "Kétszeres kattintási küszöb"
 msgid "VALFORMAT_DEGREES"
 msgstr "%s fok"
 
-#, fuzzy
 msgid "OPTVAL_VTAVANILLA"
-msgstr "Automata (Hagyományos preferált)"
+msgstr "Automatikus (Hagyományos preferált)"
 
-#, fuzzy
 msgid "OPTVAL_VTAZDOOM"
-msgstr "Automata (ZDoom preferált)"
+msgstr "Automatikus (ZDoom preferált)"
 
 msgid "MAPCOLORMNU_SECTORFILLCOLOR"
 msgstr "Szín telítettség"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 msgstr "Gombok lenyomása közötti idő a Dupla kattintáshoz"
+
+msgid "VALFORMAT_DB"
+msgstr "%s dB"
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s dB/m"
+
+msgid "VALFORMAT_FPS"
+msgstr "%s fps"
+
+msgid "VALFORMAT_HZ"
+msgstr "%s Hz"
+
+msgid "VALFORMAT_METER"
+msgstr "%s m"
+
+msgid "VALFORMAT_MSECOND"
+msgstr "%s ms"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s s"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Sérthetetlenség Mód: {BE|KI}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Tökéletes Sérthetetlenség Mód: {BE|KI}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Falonátmenés Mód: {BE|KI}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D Falonátmenési Mód: {BE|KI}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Buddha Mód: {BE|KI}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Tökéletes Buddha Mód: {BE|KI}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Energia: {BE|KI}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Hang debug: {BE|KI}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Számláló: {BE|KI}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Fagyasztás: {BE|KI}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Ólomcsizma: {BE|KI}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Nem támadnak a szörnyek: {BE|KI}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Követő kamera: {BE|KI}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Követés mód: {BE|KI}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Rács: {BE|KI}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Textúrák mód: {BE|KI}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Sérthetetlen mód: {BE|KI}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Üzenetek: {BE|KI}"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Fény"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Havi"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Letöltés folyamatban"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Kísérleti"
+
+msgid "TXT_UPDATE"
+msgstr "Frissítés"
+
+msgid "TXT_UPDATED"
+msgstr "Frissítve"
+
+msgid "TXT_BACK"
+msgstr "Vissza"
+
+msgid "TXT_SKIP"
+msgstr "Átugrás"
+
+msgid "TXT_CONFIRM"
+msgstr "Megerősítés"
+
+msgid "PICKER_THEME"
+msgstr "Téma"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Frissítések keresése"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Frissítő Beállítások"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Felkeresni minden:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Új frissítés elérhető"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Frissítés mellőzése"
+
+msgid "UPDATER_TITLE"
+msgstr "Frissítés kereső"
+
+msgid "UPDATER_DISABLE"
+msgstr "Frissítés kereső kikapcsolása"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Frissítés keresése sikertelen"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Frissítés sikertelen"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Mellőzi a frissítést?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Szeretnéd, hogy automatikusan legyenek frissítések keresve?\n"
+"(ezt meglehet később változtatni a beállításokban)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Milyen gyakran szeretné, hogy keresve legyenek frissítések?\n"
+"(ezt meglehet később változtatni a beállításokban)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "zip fájl megnyitása sikertelen volt"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Zip fájl megnyitása sikertelen volt, hiba oka: '{}' miközben a '{}' fájl írás alatt volt"
+
+msgid "UPDATER_UPDATING"
+msgstr "Frissítés..."
+
+msgid "UPDATER_STARTING"
+msgstr "Letöltés indítása..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Frissítés sikeres, az indító most újra fog indulni."
+
+msgid "UPDATER_CANCELLED"
+msgstr "Frissítés megszakítva"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' nem egy mappa"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Kikapcsol"
+
+msgid "OPTVAL_DAILY"
+msgstr "Napi"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Heti"
+
+msgid "TXT_CANCELLED"
+msgstr "Megszakítva"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Naprakész!"

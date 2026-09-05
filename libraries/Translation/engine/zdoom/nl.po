@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-13 16:30+0000\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/nl/>\n"
 "Language: nl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Druk op een toets."
@@ -282,35 +282,11 @@ msgstr "Muziek veranderen"
 msgid "STSTR_NOMUS"
 msgstr "Onmogelijke selectie"
 
-msgid "STSTR_DQDON"
-msgstr "Gegradeloosheid modus: AAN"
-
-msgid "STSTR_DQDOFF"
-msgstr "Gegradeloosheid modus: UIT"
-
-msgid "STSTR_DQD2ON"
-msgstr "Uiteindelijke Gegradeloosheid modus: AAN"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Uiteindelijke Gegradeloosheid modus: UIT"
-
 msgid "STSTR_KFAADDED"
 msgstr "Zeer gelukkige munitie toegevoegd"
 
 msgid "STSTR_FAADDED"
 msgstr "Munitie (geen sleutels) toegevoegd"
-
-msgid "STSTR_NCON"
-msgstr "Geen Clipping Modus: AAN"
-
-msgid "STSTR_NCOFF"
-msgstr "Geen Clipping Modus: UIT"
-
-msgid "STSTR_NC2ON"
-msgstr "3D-modus zonder clipping: AAN"
-
-msgid "STSTR_NC2OFF"
-msgstr "3D-modus zonder clipping: UIT"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -332,47 +308,17 @@ msgstr "… is niet slecht - GM"
 msgid "STSTR_CLEV"
 msgstr "Level veranderen…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Boeddha-modus: AAN"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Boeddha-modus: UIT"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ultieme Boeddha-modus: AAN"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ultieme Boeddha-modus: UIT"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Vermogen: AAN"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Vermogen: UIT"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Volledige gezondheid"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Alle sleutels"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Geluid debug: AAN"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Geluid debug: UIT"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Je wou valsspelen, hè? Nu ga je dood!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Valsspeler—je verdient geen wapens"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: AAN"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: UIT"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Je hebt het"
@@ -383,12 +329,6 @@ msgstr "Je hebt de Midas Touch, schatje"
 msgid "TXT_GOTSTUFF"
 msgstr "Je hebt het spul!"
 
-msgid "TXT_FREEZEON"
-msgstr "Bevriesmodus: AAN"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Bevriesmodus: UIT"
-
 msgid "TXT_STRANGE"
 msgstr "Je voelt je vreemd…"
 
@@ -398,35 +338,17 @@ msgstr "Je voelt je nog vreemder."
 msgid "TXT_NOTSTRANGE"
 msgstr "Je voelt je weer als jezelf."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Loden laarzen: AAN"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Loden laarzen: UIT"
-
 msgid "TXT_LIGHTER"
 msgstr "Je voelt je lichter"
 
 msgid "TXT_GRAVITY"
 msgstr "De zwaartekracht drukt je naar beneden"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Geen doelwit: AAN"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Geen doelwit: UIT"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "„Beving van angst!“"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Geen Ogre Pantser meer"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Chasecam: AAN"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Chasecam: UIT"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 slechterik gedood"
@@ -452,24 +374,6 @@ msgstr "Wat wil je buiten een spel om doden?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Eigenschappen van de bevroren speler: UIT"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Volgmodus: UIT"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Volgmodus: AAN"
-
-msgid "AMSTR_GRIDON"
-msgstr "Raster: AAN"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Raster: UIT"
-
-msgid "AMSTR_TEXON"
-msgstr "Textuurmodus: AAN"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Textuurmodus: UIT"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Gemarkeerde plek"
@@ -2782,6 +2686,7 @@ msgstr "Geweldig werk!"
 msgid "CE4TEXT"
 msgstr "Fantastisch"
 
+#, fuzzy
 msgid "CLOADNET"
 msgstr ""
 "Je kunt niet laden tijdens een netspel!\n"
@@ -2848,14 +2753,6 @@ msgstr ""
 "Weet je zeker dat je de missie wilt beëindigen?\n"
 "\n"
 "Druk op Y of N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Onoverwinnelijke modus: AAN"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Onoverwinnelijke modus: UIT"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -4340,6 +4237,7 @@ msgstr "Tekeninglijsten sorteren op textuur"
 msgid "GLLIGHTMNU_TITLE"
 msgstr "Dynamische verlichting"
 
+#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Dynamische verlichting (hardware)"
 
@@ -4521,9 +4419,6 @@ msgstr "Lineair filter voor upscaling"
 msgid "TCMNU_MIPMAP"
 msgstr "Gebruik mipmapped texturen"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Dynamische verlichting (software)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Toon altijd de toetsen"
 
@@ -4560,16 +4455,16 @@ msgstr "Savegame '%s' is van een andere ZDoom-gebaseerde engine:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Savegame '%s' is van een oudere versie: %d (%e is de oudste ondersteunde versie)."
+"Savegame '%s' is van een oudere versie: %d (%e is de oudste ondersteunde "
+"versie)."
 
 # Shouldn’t this say “%e is the newest supported”?
-#
 # — Undead
-#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Savegame '%s' is van een nieuwere versie: %d (%e is de hoogst ondersteunde versie)."
+"Savegame '%s' is van een nieuwere versie: %d (%e is de hoogst ondersteunde "
+"versie)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Savegame '%s' mist de huidige kaart."
@@ -5194,11 +5089,14 @@ msgstr "Extra verlichting"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"Bepaalt de straal van de verlichting rondom de speler in kaarteenheden. Hoe hoger de waarde, hoe helderder de scène."
+"Bepaalt de straal van de verlichting rondom de speler in kaarteenheden. Hoe "
+"hoger de waarde, hoe helderder de scène."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"De hoeveelheid sectorverlichting die bovenop de bestaande verlichtingsniveaus van de sector moet worden toegevoegd, met behoud van de bestaande verlichtingsmodus."
+"De hoeveelheid sectorverlichting die bovenop de bestaande "
+"verlichtingsniveaus van de sector moet worden toegevoegd, met behoud van de "
+"bestaande verlichtingsmodus."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Lichtstraal van de speler"
@@ -5238,30 +5136,41 @@ msgstr "Schakel ze uit voordat u de instellingen aanpast."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Compenseert de beperkingen van je beeldscherm. Pas de instelling aan totdat de verticale grijze blokken vervagen. Gebruik deze functie niet om het spel helderder te maken, maar alleen om ervoor te zorgen dat het beeld is afgestemd op jouw systeem."
+"Compenseert de beperkingen van je beeldscherm. Pas de instelling aan totdat "
+"de verticale grijze blokken vervagen. Gebruik deze functie niet om het spel "
+"helderder te maken, maar alleen om ervoor te zorgen dat het beeld is "
+"afgestemd op jouw systeem."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Vergoeding van Blackpoint"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Compenseert voor beeldschermen die donkere pixels niet correct weergeven. Pas de instelling aan totdat de diagonale witte blokken vervagen. Gebruik deze functie niet om het spel helderder te maken, maar alleen om ervoor te zorgen dat het beeld is afgestemd op jouw opstelling."
+"Compenseert voor beeldschermen die donkere pixels niet correct weergeven. "
+"Pas de instelling aan totdat de diagonale witte blokken vervagen. Gebruik "
+"deze functie niet om het spel helderder te maken, maar alleen om ervoor te "
+"zorgen dat het beeld is afgestemd op jouw opstelling."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr ""
-"Hiermee worden alle opties in dit menu teruggezet naar de standaardinstellingen."
+"Hiermee worden alle opties in dit menu teruggezet naar de "
+"standaardinstellingen."
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Hiermee wordt een lineaire helderheidsaanpassing toegepast. Pas de helderheid aan naar eigen voorkeur, of om in het donker te kunnen zien."
+"Hiermee wordt een lineaire helderheidsaanpassing toegepast. Pas de "
+"helderheid aan naar eigen voorkeur, of om in het donker te kunnen zien."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"Hiermee pas je het waargenomen verschil tussen vergelijkbare kleuren aan. Hiermee bepaal je hoe scherp of vaal de afbeeldingen eruitzien. Pas dit aan naar eigen smaak."
+"Hiermee pas je het waargenomen verschil tussen vergelijkbare kleuren aan. "
+"Hiermee bepaal je hoe scherp of vaal de afbeeldingen eruitzien. Pas dit aan "
+"naar eigen smaak."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"Hiermee past u de kleurintensiteit aan, waardoor het beeld levendiger of juist wat gedempter wordt. Pas dit aan naar eigen smaak."
+"Hiermee past u de kleurintensiteit aan, waardoor het beeld levendiger of "
+"juist wat gedempter wordt. Pas dit aan naar eigen smaak."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Pas dit aan totdat het eruitziet als een egale grijze kleur."
@@ -5366,3 +5275,58 @@ msgstr "Auto (bij voorkeur Vanilla)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Auto (bij voorkeur ZDoom)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Gegradeloosheid modus: {AAN|UIT}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Uiteindelijke Gegradeloosheid modus: {AAN|UIT}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Geen Clipping Modus: {AAN|UIT}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D-modus zonder clipping: {AAN|UIT}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Boeddha-modus: {AAN|UIT}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ultieme Boeddha-modus: {AAN|UIT}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Vermogen: {AAN|UIT}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Geluid debug: {AAN|UIT}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {AAN|UIT}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Bevriesmodus: {AAN|UIT}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Loden laarzen: {AAN|UIT}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Geen doelwit: {AAN|UIT}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Chasecam: {AAN|UIT}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Volgmodus: {AAN|UIT}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Raster: {AAN|UIT}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Textuurmodus: {AAN|UIT}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Onoverwinnelijke modus: {AAN|UIT}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Berichten: {AAN|UIT}"
