@@ -2559,6 +2559,7 @@ OptionMenu "CompatMapMenu" protected
 	Option "$CMPTMNU_CHECKSWITCHRANGE",				"compat_checkswitchrange", "YesNo"
 	Option "$CMPTMNU_RAILINGHACK",					"compat_railing", "YesNo"
 	Option "$CMPTMNU_TRANSFERSECRET",				"compat_transfersecret", "YesNo"
+	Option "$CMPTMNU_MISSILENOACTIVEIMPACT",		"compat_missilenoactivateimpact", "YesNo"
 	Class "CompatibilityMenu"
 }
 

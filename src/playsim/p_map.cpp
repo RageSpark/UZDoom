@@ -2290,7 +2290,7 @@ static void CheckForPushSpecial(line_t *line, int side, AActor *mobj, DVector2 *
 		{
 			P_ActivateLine(line, mobj, side, SPAC_Push);
 		}
-		else if (mobj->flags2 & MF2_IMPACT)
+		else if (mobj->flags2 & MF2_IMPACT && !(compatflags2 & COMPATF2_MISSILENOACTIVEIMPACT || (mobj->Level->maptype == MAPTYPE_DOOM && sv_autocompat)))
 		{
 			if ((mobj->Level->flags2 & LEVEL2_MISSILESACTIVATEIMPACT) ||
 				!(mobj->flags & MF_MISSILE) ||
